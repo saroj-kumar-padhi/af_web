@@ -1,4 +1,11 @@
+import 'package:afghan_net/afganistan.dart';
+import 'package:afghan_net/catagory.dart';
+import 'package:afghan_net/order.dart';
+import 'package:afghan_net/widgets/contaierwallat.dart';
+import 'package:afghan_net/widgets/iran.dart';
+import 'package:afghan_net/widgets/turkey.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TabDemo extends StatefulWidget {
   @override
@@ -25,7 +32,7 @@ class _TabDemoState extends State<TabDemo> with SingleTickerProviderStateMixin {
       appBar: AppBar(
         flexibleSpace: Container(
           //  width: MediaQuery.of(context).size.width * 0.9,
-          //  height: MediaQuery.of(context).size.height * 0.5,
+          height: MediaQuery.of(context).size.height * 0.5,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20.0),
@@ -33,13 +40,7 @@ class _TabDemoState extends State<TabDemo> with SingleTickerProviderStateMixin {
             ),
             color: Colors.white,
           ),
-          /* child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20.0),
-                      topRight: Radius.circular(20.0),
-                    ),*/
+
           child: TabBar(
             indicatorColor: Color.fromRGBO(64, 68, 143, 1),
             labelColor: Color.fromRGBO(64, 68, 143, 1),
@@ -60,36 +61,88 @@ class _TabDemoState extends State<TabDemo> with SingleTickerProviderStateMixin {
       body: TabBarView(
         controller: _tabController,
         children: [
-          ListView.builder(
-            itemCount: 20, // The total number of items in your list
-            itemBuilder: (BuildContext context, int index) {
-              // Build and return the widget for each item
-              return Padding(
-                padding: const EdgeInsets.only(left: 10, right: 10, top: 15),
-                child: Container(
-                  height: MediaQuery.of(context).size.height * 0.08,
-                  width: MediaQuery.of(context).size.width * 0.6,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white,
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color.fromRGBO(0, 0, 0, 0.12),
-                        // offset: Offset(0, 1),
-                        blurRadius: 4.0,
+          Padding(
+            padding: const EdgeInsets.only(left: 10, right: 10, top: 15),
+            child: Flexible(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.023,
+                  ),
+                  InkWell(
+                    onTap: () => Get.to(AfganistanPage()),
+                    child: const MyListTile(
+                      imageItems: 'assets/afgan.jpg',
+                      items2: 'Credit Card',
+                      items3: 'Internet Bundle',
+                      item1: 'Afganistan',
+                      items4: 'Top Up',
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () => Get.to(IranList()),
+                    child: const MyListTile(
+                      imageItems: 'assets/iran.jpeg',
+                      items2: 'Credit Card',
+                      items3: 'Internet Bundle',
+                      item1: 'Iran',
+                      items4: 'Top Up',
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () => Get.to(TurkeyList()),
+                    child: const MyListTile(
+                      imageItems: 'assets/turkey.jpeg',
+                      items2: 'Credit Card',
+                      items3: 'Internet Bundle',
+                      item1: 'Turkey',
+                      items4: 'Top Up',
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.027,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CustomWallet3(
+                        text: 'Vimo USD',
+                        image: 'assets/vimo.jpeg',
+                      ),
+                      CustomWallet3(
+                        text: 'UC PUBG',
+                        image: 'assets/pubg.jpeg',
+                      ),
+                      CustomWallet3(
+                        text: 'Imo Diamond',
+                        image: 'assets/imo.jpeg',
                       ),
                     ],
                   ),
-                  child: ListTile(
-                    title: Text('$index. Transaction $index'),
-                    // You can customize the appearance of each item here
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.027,
                   ),
-                ),
-              );
-            },
-          )
-          // Center(child: Text('Tab 3 Content')),
-          //   Center(child: Text('Tab  Content')),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        CustomWallet3(
+                          text: 'TikTok Coin',
+                          image: 'assets/tiktok.jpeg',
+                        ),
+                        CustomWallet3(
+                          text: 'VPN',
+                          image: 'assets/vpn.jpeg',
+                        ),
+                        CustomWallet3(
+                          text: 'Crypto Currency',
+                          image: 'assets/currency.jpeg',
+                        ),
+                      ]),
+                ],
+              ),
+            ),
+          ),
+          OrderPage()
         ],
       ),
     );
