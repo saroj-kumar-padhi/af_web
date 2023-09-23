@@ -51,11 +51,11 @@ class RechargePage extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            CustomWallet4(image: 'assets/AWCC.jpg'),
-            CustomWallet4(image: 'assets/MTN.jpg'),
-            CustomWallet4(image: 'assets/Roshan.png'),
-            CustomWallet4(image: 'assets/salaam.jpg'),
-            CustomWallet4(image: 'assets/etisalat-200x160-1.png'),
+            CustomWallet4(image: 'assets/AWCC1.png'),
+            CustomWallet4(image: 'assets/MTN1.jpeg'),
+            CustomWallet4(image: 'assets/roshan1.png'),
+            CustomWallet4(image: 'assets/salaam1.png'),
+            CustomWallet4(image: 'assets/etisalat1.png'),
           ],
         ),
         SizedBox(

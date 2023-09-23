@@ -119,66 +119,6 @@ class Scard extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.17,
         ),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //   children: [
-        //     Container(
-        //       width: MediaQuery.of(context).size.width * 0.45,
-        //       height: MediaQuery.of(context).size.height * 0.06,
-        //       child: ElevatedButton(
-        //           onPressed: () {
-        //             // Handle cancel button
-        //             Get.back(result: "Cancel");
-        //           },
-        //           style: ButtonStyle(
-        //             backgroundColor: MaterialStateProperty.all<Color>(
-        //                 Colors.white), // Blue button color
-        //             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-        //               RoundedRectangleBorder(
-        //                 borderRadius:
-        //                     BorderRadius.circular(4.0), // 4.0 border radius
-        //               ),
-        //             ),
-        //           ),
-        //           child: const Text(
-        //             "Cancel",
-        //             style: TextStyle(
-        //                 fontSize: 15,
-        //                 fontWeight: FontWeight.bold,
-        //                 color: Colors.black),
-        //           )),
-        //     ),
-        //     // SizedBox(
-        //     //   width: MediaQuery.of(context).size.width * 0.02,
-        //     // ),
-        //     Container(
-        //       width: MediaQuery.of(context).size.width * 0.45,
-        //       height: MediaQuery.of(context).size.height * 0.06,
-        //       child: ElevatedButton(
-        //           onPressed: () {
-        //             // Handle cancel button
-        //             Get.back(result: "Cancel");
-        //           },
-        //           style: ButtonStyle(
-        //             backgroundColor: MaterialStateProperty.all<Color>(
-        //                 Color.fromRGBO(64, 68, 143, 1)), // Blue button color
-        //             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-        //               RoundedRectangleBorder(
-        //                 borderRadius:
-        //                     BorderRadius.circular(4.0), // 4.0 border radius
-        //               ),
-        //             ),
-        //           ),
-        //           child: const Text(
-        //             "Confirm",
-        //             style: TextStyle(
-        //                 fontSize: 15,
-        //                 fontWeight: FontWeight.bold,
-        //                 color: Colors.white),
-        //           )),
-        //     ),
-        //   ],
-        // ),
       ]),
     );
   }

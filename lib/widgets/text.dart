@@ -17,6 +17,7 @@ class CustomText extends StatelessWidget {
     double fontSizeInDP = 16.0;
     double fontSizeInDP5 = 14.0;
     return Text(text,
+        softWrap: true,
         //'Address Details',
         style: TextStyle(
             fontFamily:
@@ -38,15 +39,20 @@ class CustomText1 extends StatelessWidget {
     double fontSizeInDP1 = 12.0;
     double fontSizeInDP = 16.0;
     double fontSizeInDP5 = 14.0;
-    return Text(text,
-        //'Address Details',
+    return Container(
+      width: MediaQuery.of(context).size.width *
+          0.3, // Set the maximum width for the text
+      child: Text(
+        text,
+        // textAlign: TextAlign.center,
         style: TextStyle(
-            fontFamily:
-                'Inter', // Use the fontFamily you specified in pubspec.yaml
-            fontSize: 12,
-            fontWeight: FontWeight.normal,
-            color: Color.fromRGBO(
-                89, 83, 83, 1)) // You can adjust the weight as needed
-        );
+          fontFamily: 'Inter',
+          fontSize: 13,
+          fontWeight: FontWeight.normal,
+          color: Color.fromRGBO(89, 83, 83, 1),
+        ),
+        softWrap: true, // Enable text wra
+      ),
+    );
   }
 }

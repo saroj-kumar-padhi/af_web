@@ -110,11 +110,11 @@ class ListViewPage extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.only(
-                          top: 10,
+                          top: 7,
                         ),
                         child: Container(
                           width: MediaQuery.of(context).size.width * 0.18,
-                          height: MediaQuery.of(context).size.height * 0.079,
+                          height: MediaQuery.of(context).size.height * 0.08,
                           decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(100.0),
@@ -122,8 +122,8 @@ class ListViewPage extends StatelessWidget {
                           child: ClipOval(
                             child: Image.asset(
                               'assets/currency.jpeg', // Replace with your image asset path
-                              width: 140.0,
-                              height: 140.0,
+                              width: 100.0,
+                              height: 100.0,
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -132,14 +132,14 @@ class ListViewPage extends StatelessWidget {
                       Center(
                         child: CustomText(
                           text: 'Crypto',
-                          fontSize: 13,
+                          fontSize: 12,
                           fontWeight: FontWeight.normal,
                         ),
                       ),
                       Center(
                         child: CustomText(
                           text: 'Currency',
-                          fontSize: 13,
+                          fontSize: 12,
                           fontWeight: FontWeight.normal,
                         ),
                       )
