@@ -1,8 +1,8 @@
-import 'package:afghan_net/afganistan.dart';
+import 'package:afghan_net/Afgan_List_UI/afganistan.dart';
 import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/order.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
-import 'package:afghan_net/widgets/iran.dart';
+import 'package:afghan_net/iran.dart/iran.dart';
 import 'package:afghan_net/widgets/turkey.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
