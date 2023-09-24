@@ -1,4 +1,4 @@
-import 'package:afghan_net/List_UI/pin_phone.dart';
+import 'package:afghan_net/Afgan_List_UI/pin_phone.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -248,12 +248,12 @@ class CustomWallet4 extends StatelessWidget {
                 Color.fromARGB(255, 148, 179, 205), // Set the border color here
             width: 1.0, // Set the border width here
           ),
-          borderRadius: BorderRadius.circular(18.0),
+          borderRadius: BorderRadius.circular(12.0),
         ),
         child: Image.asset(
           image, // Replace with your image asset path
-          width: 100.0,
-          height: 100.0,
+          width: 90.0,
+          height: 80.0,
           fit: BoxFit.contain,
         ),
       ),
@@ -296,7 +296,7 @@ class CustomWallet5 extends StatelessWidget {
               image, // Replace with your image asset path
               width: 140.0,
               height: 140.0,
-              fit: BoxFit.fill,
+              fit: BoxFit.contain,
             ),
           ),
         ),
@@ -380,11 +380,11 @@ class CustomWallet6 extends StatelessWidget {
           child: Image.asset(
             image, // Replace with your image asset path
 
-            fit: BoxFit.fill,
+            fit: BoxFit.contain,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 12),
+          padding: const EdgeInsets.only(left: 25),
           child: CustomText(
             text: text1,
             fontSize: 15,
@@ -413,7 +413,6 @@ class CustomWallet7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Get.to(PinPhonePAge()),
       child: Container(
         width: MediaQuery.of(context).size.width * 0.92,
         height: MediaQuery.of(context).size.height * 0.14,
@@ -462,7 +461,7 @@ class CustomWallet7 extends StatelessWidget {
             child: Image.asset(
               image, // Replace with your image asset path
 
-              fit: BoxFit.fill,
+              fit: BoxFit.contain,
             ),
           ),
           Padding(
@@ -496,7 +495,6 @@ class CustomWallet8 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => Get.to(PinPhonePAge()),
       child: Container(
         width: MediaQuery.of(context).size.width * 0.9,
         height: MediaQuery.of(context).size.height * 0.1,
@@ -515,11 +513,15 @@ class CustomWallet8 extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomText1(
+              CustomText(
                 text: text,
+                fontSize: 14,
+                fontWeight: FontWeight.normal,
               ),
-              CustomText1(
+              CustomText(
                 text: text2,
+                fontSize: 14,
+                fontWeight: FontWeight.normal,
               ),
             ],
           ),
@@ -547,12 +549,74 @@ class CustomWallet8 extends StatelessWidget {
             padding: const EdgeInsets.only(left: 12),
             child: CustomText(
               text: text1,
-              fontSize: 13,
+              fontSize: 14,
               fontWeight: FontWeight.normal,
             ),
           ),
         ]),
       ),
+    );
+  }
+}
+
+class CustomWallet61 extends StatelessWidget {
+  final String text;
+  // final String image;
+  final String text1;
+  //final String? text2;
+  CustomWallet61({
+    super.key,
+    //required this.text,
+    // required this.image,
+    required this.text,
+    required this.text1,
+    // this.text2,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width * 0.8,
+      height: MediaQuery.of(context).size.height * 0.09,
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              // spreadRadius: 5,
+              blurRadius: 6,
+              offset: Offset(0, 3),
+            ),
+          ]),
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        Padding(
+          padding: const EdgeInsets.only(
+            left: 20,
+          ),
+          child: Text(
+            text,
+            // textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Inter',
+              fontSize: 15,
+              fontWeight: FontWeight.normal,
+              color: Color.fromRGBO(89, 83, 83, 1),
+            ),
+            softWrap: true, // Enable text wra
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(
+            right: 20,
+          ),
+          child: CustomText(
+            text: text1,
+            fontSize: 15,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+      ]),
     );
   }
 }
