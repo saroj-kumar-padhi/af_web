@@ -7,6 +7,8 @@ import 'package:afghan_net/Afgan_List_UI/topUpCard/roshan_t.dart';
 import 'package:afghan_net/Afgan_List_UI/topUpCard/salaam_t.dart';
 import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/iran.dart/list.dart/top_up/topUp.dart';
+import 'package:afghan_net/other_network/diamond.dart';
+import 'package:afghan_net/other_network/pubg.dart';
 import 'package:afghan_net/other_network/vimo.dart';
 import 'package:afghan_net/splash.dart';
 import 'package:afghan_net/iran.dart/iran.dart';
@@ -31,7 +33,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: VimoPage());
+        home: DiamondPage());
+    // PubgPage());
     //TopUpIran());
     //IbAWCCMb());
     //IranList());

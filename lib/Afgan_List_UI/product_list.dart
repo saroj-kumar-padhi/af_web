@@ -296,3 +296,54 @@ List<String> topUpIran2 = [
 List<String> Vimo1 = ['1 USD ', '4 USD ', '5 USD ', '10 USD ', '20 USD '];
 
 List<String> Vimo2 = [' 75 AF', ' 285 AF', '360 AF', '720 AF', '1430 AF'];
+
+List<String> pubg = [
+  '60   UC',
+  '120  UC',
+  '180  UC',
+  '328  UC',
+  '660  UC',
+  '720  UC',
+  '1800  UC',
+  '1920  UC',
+  '3850  UC',
+  '8100  UC'
+];
+
+List<String> pubg2 = [
+  '65  AF',
+  '125  AF',
+  '190 AF',
+  '330 AF',
+  '700 AF',
+  '790 AF',
+  '1780 AF',
+  '1900 AF',
+  '3600 AF',
+  '7150 AF'
+];
+
+List<String> imoDiamond = [
+  '50 💎 ',
+  '100 💎 ',
+  '150 💎 ',
+  '200 💎 ',
+  '300 💎',
+  '400 💎 ',
+  '500 💎',
+  '1000 💎 ',
+  '2000 💎',
+  '5000 💎 '
+];
+List<String> imoDiamond2 = [
+  '115  AF',
+  '215  AF',
+  '320  AF',
+  '430  AF',
+  '650  AF',
+  '860  AF',
+  '1100  AF',
+  '2150  AF',
+  '4300  AF',
+  '10700  AF'
+];
