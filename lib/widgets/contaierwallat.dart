@@ -345,17 +345,19 @@ class CustomWallet6 extends StatelessWidget {
               offset: Offset(0, 3),
             ),
           ]),
-      child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Padding(
           padding: const EdgeInsets.only(
-            left: 12,
+            left: 17,
           ),
           child:
               //  Column(
               //   mainAxisAlignment: MainAxisAlignment.center,
               //   children: [
-              CustomText1(
+              CustomText(
             text: text,
+            fontSize: 15,
+            fontWeight: FontWeight.normal,
           ),
           // CustomText1(
           //   text: '',
@@ -365,7 +367,7 @@ class CustomWallet6 extends StatelessWidget {
         ),
         Container(
           width: MediaQuery.of(context).size.width * 0.2,
-          height: MediaQuery.of(context).size.height * 0.06,
+          height: MediaQuery.of(context).size.height * 0.07,
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10.0),
@@ -380,11 +382,11 @@ class CustomWallet6 extends StatelessWidget {
           child: Image.asset(
             image, // Replace with your image asset path
 
-            fit: BoxFit.contain,
+            fit: BoxFit.fill,
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 25),
+          padding: const EdgeInsets.only(right: 17),
           child: CustomText(
             text: text1,
             fontSize: 15,
