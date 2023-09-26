@@ -1,4 +1,5 @@
 import 'package:afghan_net/Afgan_List_UI/afganistan.dart';
+import 'package:afghan_net/other_network/vpn_category.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/iran.dart/iran.dart';
 import 'package:afghan_net/widgets/text.dart';
@@ -87,9 +88,14 @@ class ListViewPage extends StatelessWidget {
                   text: 'TikTok Coin',
                   image: 'assets/tiktok.jpeg',
                 ),
-                CustomWallet3(
-                  text: 'VPN',
-                  image: 'assets/vpn.jpeg',
+                InkWell(
+                  onTap: (){
+                    Get.to(Vpn_Category());
+                  },
+                  child: CustomWallet3(
+                    text: 'VPN',
+                    image: 'assets/vpn.jpeg',
+                  ),
                 ),
                 Container(
                   width: MediaQuery.of(context).size.width * 0.27,

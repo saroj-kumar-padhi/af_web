@@ -29,7 +29,9 @@ class VimoPage extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
                 child: InkWell(
-                  onTap: () => Get.to(showDialogPhone()),
+                  onTap: () {
+showDialogPhone();
+                  },
                   child: CustomWallet6(
                     image: 'assets/vimo2.png',
                     text: Vimo1[index],
@@ -52,10 +54,15 @@ class VimoPage extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 215),
-              child: const Icon(
-                Icons.close,
-                color: Colors.black,
-                size: 30,
+              child: InkWell(
+                 onTap: (){
+               Get.back();
+             },
+                child: const Icon(
+                  Icons.close,
+                  color: Colors.black,
+                  size: 30,
+                ),
               ),
             ),
             CustomText(

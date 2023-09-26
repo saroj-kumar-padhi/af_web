@@ -347,3 +347,32 @@ List<String> imoDiamond2 = [
   '4300  AF',
   '10700  AF'
 ];
+
+List<String> iranCell = [
+  '30 GB/1 month',
+  '50  GB/1 months',
+  '90  GB/3 months',
+  '110  GB/3 months',
+];
+
+List<String> iranCellPrice = [
+  '200 AF',
+  '280 AF',
+  '500 AF',
+  '580 AF',
+];
+
+
+List<String> vpn_all= [
+  '30 GB/1 month',
+  '50  GB/1 months',
+  '90  GB/3 months',
+  '110  GB/3 months',
+];
+
+List<String> vpn_allPrice = [
+  '260 AF',
+  '320 AF',
+  '640 AF',
+  '720 AF',
+];
