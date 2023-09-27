@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/widgets/tab_navigate.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -53,7 +54,7 @@ class HomePage extends StatelessWidget {
         ),
       ),
       key: _scaffoldKey,
-      drawer: Drawer(),
+      drawer: All_Drawer(),
       body: SingleChildScrollView(
         child: Column(children: [
           SizedBox(

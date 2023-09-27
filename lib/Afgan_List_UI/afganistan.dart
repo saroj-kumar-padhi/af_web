@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/Afgan_List_UI/network_type.dart';
 import 'package:afghan_net/widgets/subscription_card.dart';
@@ -11,7 +12,7 @@ class AfganistanPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: All_Drawer(),
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.only(left: 30),
@@ -28,7 +29,7 @@ class AfganistanPage extends StatelessWidget {
         children: [
           Center(
             child: InkWell(
-              onTap: () => Get.to(NetworTypePage()),
+              onTap: () => Get.to(() => NetworTypePage()),
               // Scard(
               //   text1: 'Internet Data Calling',
               //   imageUrl:
@@ -44,7 +45,7 @@ class AfganistanPage extends StatelessWidget {
           Center(
             child: InkWell(
               onTap: () => Get.to(
-                (NetworTypePage()),
+                () => NetworTypePage(),
                 // Scard(
                 //   text1: 'Voice Calling Bundle',
                 //   imageUrl:

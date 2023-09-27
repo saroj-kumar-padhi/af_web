@@ -1,4 +1,3 @@
-import 'package:afghan_net/Afgan_List_UI/pin_phone.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -622,7 +621,6 @@ class CustomWallet61 extends StatelessWidget {
     );
   }
 }
-
 
 class CustomWallet31 extends StatelessWidget {
   final String text;

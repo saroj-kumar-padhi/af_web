@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/Afgan_List_UI/product_list.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/widgets/text.dart';
@@ -10,7 +11,7 @@ class VimoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(),
+        drawer: All_Drawer(),
         appBar: AppBar(
           title: Padding(
             padding: const EdgeInsets.only(
@@ -30,7 +31,7 @@ class VimoPage extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
                 child: InkWell(
                   onTap: () {
-showDialogPhone();
+                    showDialogPhone();
                   },
                   child: CustomWallet6(
                     image: 'assets/vimo2.png',
@@ -55,9 +56,9 @@ showDialogPhone();
             Padding(
               padding: const EdgeInsets.only(left: 215),
               child: InkWell(
-                 onTap: (){
-               Get.back();
-             },
+                onTap: () {
+                  Get.back();
+                },
                 child: const Icon(
                   Icons.close,
                   color: Colors.black,

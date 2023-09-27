@@ -362,8 +362,7 @@ List<String> iranCellPrice = [
   '580 AF',
 ];
 
-
-List<String> vpn_all= [
+List<String> vpn_all = [
   '30 GB/1 month',
   '50  GB/1 months',
   '90  GB/3 months',
@@ -375,4 +374,20 @@ List<String> vpn_allPrice = [
   '320 AF',
   '640 AF',
   '720 AF',
+];
+
+List<String> tikTok = [
+  '120   coin ',
+  '300   coin',
+  '400   coin',
+  '900   coin ',
+  '2980   coin '
+];
+
+List<String> tikTok1 = [
+  '135  AF',
+  '370  AF',
+  '740  AF',
+  '1100  AF',
+  '3600  AF'
 ];

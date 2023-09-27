@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/recharge.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class Scard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: All_Drawer(),
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.only(left: 30),

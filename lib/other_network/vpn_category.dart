@@ -16,7 +16,7 @@ class Vpn_Category extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(),
+        drawer: All_Drawer(),
         appBar: AppBar(
           title: Padding(
             padding: const EdgeInsets.only(left: 80),
@@ -27,13 +27,12 @@ class Vpn_Category extends StatelessWidget {
             ),
           ),
         ),
-
         body: Column(children: [
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.01,
           ),
           InkWell(
-            onTap: () => Get.to(()=>Irancell()),
+            onTap: () => Get.to(() => Irancell()),
             child: const MyListTile(
               imageItems: 'assets/Vpn_iran.jpeg',
               item1: 'VPN for Irancell',
@@ -47,24 +46,15 @@ class Vpn_Category extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () => Get.to(()=>MyVpn()),
+            onTap: () => Get.to(() => MyVpn()),
             child: const MyListTile(
               imageItems: 'assets/buy-VPN-anonymously-icon.png',
-          
               item1: 'My VPN',
-            
             ),
           ),
-        
-          
-        
-          
-        ])
-    );
+        ]));
   }
 }
-
-
 
 class MyListTile extends StatelessWidget {
   final String item1;
@@ -74,9 +64,7 @@ class MyListTile extends StatelessWidget {
   const MyListTile({
     super.key,
     required this.imageItems,
- 
     required this.item1,
-    
   });
 
   @override
@@ -140,7 +128,6 @@ class MyListTile extends StatelessWidget {
                             color: Color.fromRGBO(89, 83, 83,
                                 1)) // You can adjust the weight as needed
                         ),
-                 
                   ]),
             ),
           )

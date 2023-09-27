@@ -10,7 +10,7 @@ class ReceiptDialog extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: InkWell(
-          onTap: () => Get.to(_showDialogReceipt()),
+          onTap: () => _showDialogReceipt(),
           child: Container(
             child: CustomText(
                 text: 'Dialog box', fontSize: 20, fontWeight: FontWeight.bold),
