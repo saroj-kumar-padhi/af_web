@@ -1,4 +1,7 @@
 import 'package:afghan_net/Afgan_List_UI/afganistan.dart';
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/irancell.dart';
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/my_vpn.dart';
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/iran.dart/iran.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
@@ -30,25 +33,21 @@ class Vpn_Category extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.01,
           ),
           InkWell(
-            onTap: () => Get.to(AfganistanPage()),
+            onTap: () => Get.to(()=>Irancell()),
             child: const MyListTile(
               imageItems: 'assets/Vpn_iran.jpeg',
-            
               item1: 'VPN for Irancell',
-             
             ),
           ),
           InkWell(
-            onTap: () => Get.to(IranList()),
+            onTap: () => Get.to(Vpn_all()),
             child: const MyListTile(
               imageItems: 'assets/Vpn_all.jpeg',
-        
               item1: 'VPN for all Network',
-             
             ),
           ),
           InkWell(
-            onTap: () => Get.to(TurkeyList()),
+            onTap: () => Get.to(()=>MyVpn()),
             child: const MyListTile(
               imageItems: 'assets/buy-VPN-anonymously-icon.png',
           

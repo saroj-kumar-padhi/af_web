@@ -1,5 +1,6 @@
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/AWCC_m.dart';
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/irancell.dart';
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/my_vpn.dart';
 import 'package:afghan_net/Afgan_List_UI/pin_phone.dart';
 import 'package:afghan_net/Afgan_List_UI/topUpCard/AWCC_t.dart';
 import 'package:afghan_net/Afgan_List_UI/topUpCard/etisalat_t.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-        home: Vpn_all());
+        home: MyVpn());
     // PubgPage());
     //TopUpIran());
     //IbAWCCMb());
@@ -46,5 +47,6 @@ class MyApp extends StatelessWidget {
     //PinPhonePAge()
     //ListViewPage()
     //Vpn_Category()
+    //Vpn_all()
   }
 }
