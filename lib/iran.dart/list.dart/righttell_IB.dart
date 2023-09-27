@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/Afgan_List_UI/product_list.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/widgets/text.dart';
@@ -10,7 +11,7 @@ class RightIb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(),
+        drawer: All_Drawer(),
         appBar: AppBar(
           title: Padding(
             padding: const EdgeInsets.only(
@@ -29,7 +30,7 @@ class RightIb extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
                 child: InkWell(
-                  onTap: () => Get.to(showDialogPhone()),
+                  onTap: () => showDialogPhone(),
                   child: CustomWallet8(
                     image: 'assets/Logo-persian_preview-removebg-preview.png',
                     text: topUpIB[index],

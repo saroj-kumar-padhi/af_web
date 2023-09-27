@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/Afgan_List_UI/product_list.dart';
 import 'package:afghan_net/widgets/dotted_line.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class OrderPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(),
+        drawer: All_Drawer(),
         appBar: AppBar(
           title: Padding(
             padding: const EdgeInsets.only(left: 90),
@@ -28,7 +29,7 @@ class OrderPage1 extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.only(left: 15, right: 13, top: 15),
                 child: InkWell(
-                  onTap: () => Get.to(_showDialog()),
+                  onTap: () => _showDialog(),
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.1,
                     width: MediaQuery.of(context).size.width * 0.9,

@@ -1,7 +1,7 @@
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/AWCC_m.dart';
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/irancell.dart';
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/my_vpn.dart';
-import 'package:afghan_net/Afgan_List_UI/pin_phone.dart';
+
 import 'package:afghan_net/Afgan_List_UI/topUpCard/AWCC_t.dart';
 import 'package:afghan_net/Afgan_List_UI/topUpCard/etisalat_t.dart';
 import 'package:afghan_net/Afgan_List_UI/topUpCard/mtn_t.dart';
@@ -34,16 +34,17 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-        home: MyVpn());
-    // PubgPage());
-    //TopUpIran());
-    //IbAWCCMb());
-    //IranList());
-    //AWCCT());
-    //Splash());
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        home:
+            //MyVpn());
+            // PubgPage());
+            //TopUpIran());
+            //IbAWCCMb());
+            //IranList());
+            //AWCCT());
+            Splash());
     //PinPhonePAge()
     //ListViewPage()
     //Vpn_Category()

@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,7 @@ class NetworTypePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: All_Drawer(),
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.only(left: 80),
@@ -32,7 +33,7 @@ class NetworTypePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
-                  onTap: () => Get.to(Scard(
+                  onTap: () => Get.to(() => Scard(
                         imageUrl:
                             'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
                         text1: 'Voice Calling',
@@ -40,11 +41,11 @@ class NetworTypePage extends StatelessWidget {
                   child: CustomWallet5(
                       text: 'Salaam', image: 'assets/salaam1.png')),
               InkWell(
-                onTap: () => Get.to(Scard(
-                  imageUrl:
-                      'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
-                  text1: 'Voice Calling',
-                )),
+                onTap: () => Get.to(() => Scard(
+                      imageUrl:
+                          'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
+                      text1: 'Voice Calling',
+                    )),
                 child: CustomWallet5(text: 'AWCC', image: 'assets/AWCC1.png'),
               ),
             ],
@@ -56,19 +57,19 @@ class NetworTypePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
-                onTap: () => Get.to(Scard(
-                  imageUrl:
-                      'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
-                  text1: 'Voice Calling',
-                )),
+                onTap: () => Get.to(() => Scard(
+                      imageUrl:
+                          'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
+                      text1: 'Voice Calling',
+                    )),
                 child: CustomWallet5(text: 'MTN', image: 'assets/MTN1.jpeg'),
               ),
               InkWell(
-                onTap: () => Get.to(Scard(
-                  imageUrl:
-                      'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
-                  text1: 'Voice Calling',
-                )),
+                onTap: () => Get.to(() => Scard(
+                      imageUrl:
+                          'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
+                      text1: 'Voice Calling',
+                    )),
                 child:
                     CustomWallet5(text: 'Roshan', image: 'assets/roshan1.png'),
               ),
@@ -78,10 +79,11 @@ class NetworTypePage extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.02,
           ),
           InkWell(
-            onTap: () => Get.to(Scard(
-              imageUrl: 'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
-              text1: 'Voice Calling',
-            )),
+            onTap: () => Get.to(() => Scard(
+                  imageUrl:
+                      'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
+                  text1: 'Voice Calling',
+                )),
             child:
                 CustomWallet5(text: 'Etisalat', image: 'assets/etisalat1.png'),
           ),

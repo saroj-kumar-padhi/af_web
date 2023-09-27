@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/iran.dart/list.dart/IronIB.dart';
 import 'package:afghan_net/iran.dart/list.dart/hamrah_IB.dart';
 import 'package:afghan_net/iran.dart/list.dart/righttell_IB.dart';
@@ -14,7 +15,7 @@ class IranNetworkType extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(),
+      drawer: All_Drawer(),
       appBar: AppBar(
         title: Padding(
           padding: const EdgeInsets.only(left: 80),
@@ -35,13 +36,13 @@ class IranNetworkType extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
-                  onTap: () => Get.to(IronIb()),
+                  onTap: () => Get.to(() => IronIb()),
                   child: CustomWallet5(
                       text: 'Ironcell',
                       image:
                           'assets/mtn-irancell-logo-27B4584F73-seeklogo.com.png')),
               InkWell(
-                onTap: () => Get.to(RightIb()),
+                onTap: () => Get.to(() => RightIb()),
                 child: CustomWallet5(
                     text: 'Righttell',
                     image: 'assets/Logo-persian_preview-removebg-preview.png'),
@@ -55,13 +56,13 @@ class IranNetworkType extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
-                onTap: () => Get.to(HamrahIB()),
+                onTap: () => Get.to(() => HamrahIB()),
                 child: CustomWallet5(
                     text: 'Hamrah avval',
                     image: 'assets/Hamrah_avval_logo-removebg-preview.png'),
               ),
               InkWell(
-                onTap: () => Get.to(SmartIb()),
+                onTap: () => Get.to(() => SmartIb()),
                 child: CustomWallet5(
                     text: 'Smart Shatell',
                     image: 'assets/download__1_-removebg-preview.png'),

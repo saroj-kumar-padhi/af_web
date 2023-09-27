@@ -1,4 +1,5 @@
 import 'package:afghan_net/Afgan_List_UI/afganistan.dart';
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/other_network/vpn_category.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/iran.dart/iran.dart';
@@ -13,7 +14,7 @@ class ListViewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(),
+        drawer: All_Drawer(),
         appBar: AppBar(
           title: Padding(
             padding: const EdgeInsets.only(left: 80),
@@ -30,7 +31,7 @@ class ListViewPage extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.01,
           ),
           InkWell(
-            onTap: () => Get.to(AfganistanPage()),
+            onTap: () => Get.to(() => AfganistanPage()),
             child: const MyListTile(
               imageItems: 'assets/afgan.jpg',
               items2: 'Credit Card',
@@ -40,7 +41,7 @@ class ListViewPage extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () => Get.to(IranList()),
+            onTap: () => Get.to(() => IranList()),
             child: const MyListTile(
               imageItems: 'assets/iran.jpeg',
               items2: 'Credit Card',
@@ -50,7 +51,7 @@ class ListViewPage extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () => Get.to(TurkeyList()),
+            onTap: () => Get.to(() => TurkeyList()),
             child: const MyListTile(
               imageItems: 'assets/turkey.jpeg',
               items2: 'Credit Card',
@@ -89,7 +90,7 @@ class ListViewPage extends StatelessWidget {
                   image: 'assets/tiktok.jpeg',
                 ),
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     Get.to(Vpn_Category());
                   },
                   child: CustomWallet3(

@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/iran.dart/iran_networktype.dart';
 import 'package:afghan_net/iran.dart/iran_recharge.dart';
@@ -13,7 +14,7 @@ class IranList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: Drawer(),
+        drawer: All_Drawer(),
         appBar: AppBar(
           title: Padding(
             padding: const EdgeInsets.only(left: 60),

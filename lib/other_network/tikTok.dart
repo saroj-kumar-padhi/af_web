@@ -1,49 +1,44 @@
-import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/Afgan_List_UI/product_list.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HamrahIB extends StatelessWidget {
-  const HamrahIB({super.key});
+class TikTokPage extends StatelessWidget {
+  const TikTokPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: All_Drawer(),
+        drawer: Drawer(),
         appBar: AppBar(
           title: Padding(
             padding: const EdgeInsets.only(
-              left: 80,
+              left: 90,
             ),
             child: CustomText(
-              text:
-                  //'Iron cell',
-                  'Hamrah avval',
+              text: 'TikTok',
               fontSize: 19,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
         body: ListView.builder(
-            itemCount: topUpIB.length, // Number of items in your list
+            itemCount: tikTok.length, // Number of items in your list
             itemBuilder: (BuildContext context, int index) {
               return Padding(
                 padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
                 child: InkWell(
                   onTap: () => showDialogPhone(),
-                  child: CustomWallet8(
-                    image: 'assets/Hamrah_avval_logo-removebg-preview.png',
-                    text: topUpIB[index],
+                  child: CustomWallet6(
+                    image: 'assets/tiktok (2).jpeg',
+                    text: tikTok[index],
                     //  text2: 'MTN to MTN',
-                    //
-                    text1: topUpIB2[index], text2: topUpIB3[index],
+                    text1: tikTok1[index],
                   ),
                 ),
               );
             }));
-    ;
   }
 
   showDialogPhone() {
@@ -64,7 +59,7 @@ class HamrahIB extends StatelessWidget {
               ),
             ),
             CustomText(
-                text: 'PHONE#:', fontSize: 14, fontWeight: FontWeight.bold),
+                text: 'TikTok Id:', fontSize: 15, fontWeight: FontWeight.bold),
             SizedBox(
               height: 10,
             ),
@@ -75,13 +70,12 @@ class HamrahIB extends StatelessWidget {
                 borderRadius: BorderRadius.circular(
                     10.0), // Adjust the border radius as needed
                 border: Border.all(
-                  color: Color.fromRGBO(
-                      89, 83, 83, 1), // Set the border color here
+                  color: Color.fromRGBO(89, 83, 83, 1),
                   width: 2.5, // Set the border width here
                 ),
               ),
               child: TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   contentPadding:
                       EdgeInsets.all(12.0), // Adjust padding as needed
                   border: InputBorder.none, // Remove the default underline
