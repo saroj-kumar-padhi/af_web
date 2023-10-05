@@ -7,7 +7,13 @@ import 'package:get/get.dart';
 import '../widgets/subscription_card.dart';
 
 class NetworTypePage extends StatelessWidget {
-  const NetworTypePage({super.key});
+ final String image;
+ final  String text;
+
+  const NetworTypePage({
+    required this.image,
+    required this.text,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +41,8 @@ class NetworTypePage extends StatelessWidget {
               InkWell(
                   onTap: () => Get.to(() => Scard(
                         imageUrl:
-                            'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
-                        text1: 'Voice Calling',
+                            image,
+                        text1: text,
                       )),
                   child: CustomWallet5(
                       text: 'Salaam', image: 'assets/salaam1.png')),

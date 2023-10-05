@@ -29,7 +29,7 @@ class AfganistanPage extends StatelessWidget {
         children: [
           Center(
             child: InkWell(
-              onTap: () => Get.to(() => NetworTypePage()),
+              onTap: () => Get.to(() => NetworTypePage(image: 'assets/WhatsApp Image 2023-09-18 at 10.43.54 PM.jpeg', text: 'Internet Data Bundle',)),
               // Scard(
               //   text1: 'Internet Data Calling',
               //   imageUrl:
@@ -45,7 +45,7 @@ class AfganistanPage extends StatelessWidget {
           Center(
             child: InkWell(
               onTap: () => Get.to(
-                () => NetworTypePage(),
+                () => NetworTypePage(image: 'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg', text: 'Voice Calling Bundle',),
                 // Scard(
                 //   text1: 'Voice Calling Bundle',
                 //   imageUrl:
@@ -60,11 +60,16 @@ class AfganistanPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.008),
-          const Center(
-            child: ListViewContainer(
-              items2: 'Top up Card',
-              imageItems:
-                  'assets/WhatsApp Image 2023-09-18 at 10.43.54 PM (1).jpeg',
+           Center(
+            child: InkWell(  onTap: () => Get.to(
+                () => NetworTypePage(image:  'assets/WhatsApp Image 2023-09-18 at 10.43.54 PM (1).jpeg', text: 'Top up Card',),
+              
+              ),
+              child: ListViewContainer(
+                items2: 'Top up Card',
+                imageItems:
+                    'assets/WhatsApp Image 2023-09-18 at 10.43.54 PM (1).jpeg',
+              ),
             ),
           )
         ],

@@ -27,7 +27,7 @@ class OrderPage1 extends StatelessWidget {
             itemCount: 20, // Number of items in your list
             itemBuilder: (BuildContext context, int index) {
               return Padding(
-                padding: const EdgeInsets.only(left: 15, right: 13, top: 15),
+                padding: const EdgeInsets.only(left: 10, right: 10, top: 15),
                 child: InkWell(
                   onTap: () => _showDialog(),
                   child: Container(
@@ -80,11 +80,11 @@ class OrderPage1 extends StatelessWidget {
                             ),
                           ),
                           CustomText1(text: '142.0AF'),
-                          Icon(
-                            iconsList[index],
-                            size: 24.0,
-                            color: colorList[index],
-                          ),
+                          // Icon(
+                          //   iconsList[index],
+                          //   size: 24.0,
+                          //   color: colorList[index],
+                          // ),
                         ]),
                   ),
                 ),
