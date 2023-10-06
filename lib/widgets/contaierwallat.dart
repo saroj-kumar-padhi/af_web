@@ -295,7 +295,7 @@ class CustomWallet5 extends StatelessWidget {
               image, // Replace with your image asset path
               width: 140.0,
               height: 140.0,
-              fit: BoxFit.contain,
+              fit: BoxFit.fill,
             ),
           ),
         ),

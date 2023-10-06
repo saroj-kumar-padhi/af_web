@@ -124,7 +124,8 @@ List<String> ibEtisalatmb2 = [
   '350 AF',
   '490 AF',
   ' 670 AF',
-  ' 885 AF'
+  ' 885 AF',
+  '1100 AF'
 ];
 //voice calling
 List<String> vbEtisalatmb = [

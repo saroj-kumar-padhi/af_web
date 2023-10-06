@@ -22,6 +22,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 80),
@@ -31,7 +32,6 @@ class HomePage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-          
             Container(
               width: MediaQuery.of(context).size.width * 0.14,
               height: MediaQuery.of(context).size.height * 0.065,

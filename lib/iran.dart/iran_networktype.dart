@@ -1,4 +1,5 @@
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
+import 'package:afghan_net/iran.dart/iran_recharge.dart';
 import 'package:afghan_net/iran.dart/list.dart/IronIB.dart';
 import 'package:afghan_net/iran.dart/list.dart/hamrah_IB.dart';
 import 'package:afghan_net/iran.dart/list.dart/righttell_IB.dart';
@@ -10,7 +11,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class IranNetworkType extends StatelessWidget {
-  const IranNetworkType({super.key});
+  // final String image;
+  // final String text;
+  const IranNetworkType({
+    super.key,
+    // required this.image, required this.text
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,13 +42,20 @@ class IranNetworkType extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
-                  onTap: () => Get.to(() => IronIb()),
+                  onTap: () => Get.to(() => IronIb(
+                      // image:
+                      //     'assets/mtn-irancell-logo-27B4584F73-seeklogo.com.png',
+                      // text: 'Ironcell',
+                      )),
                   child: CustomWallet5(
                       text: 'Ironcell',
                       image:
                           'assets/mtn-irancell-logo-27B4584F73-seeklogo.com.png')),
               InkWell(
-                onTap: () => Get.to(() => RightIb()),
+                onTap: () => Get.to(() => RightIb(
+                    // image: 'assets/Logo-persian_preview-removebg-preview.png',
+                    // text: 'Righttell',
+                    )),
                 child: CustomWallet5(
                     text: 'Righttell',
                     image: 'assets/Logo-persian_preview-removebg-preview.png'),
