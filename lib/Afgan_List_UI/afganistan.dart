@@ -62,7 +62,8 @@ class AfganistanPage extends StatelessWidget {
           SizedBox(height: MediaQuery.of(context).size.height * 0.008),
            Center(
             child: InkWell(  onTap: () => Get.to(
-                () => NetworTypePage(image:  'assets/WhatsApp Image 2023-09-18 at 10.43.54 PM (1).jpeg', text: 'Top up Card',),
+                () => 
+                NetworTypePage(image:  'assets/WhatsApp Image 2023-09-18 at 10.43.54 PM (1).jpeg', text: 'Top up Card',),
               
               ),
               child: ListViewContainer(

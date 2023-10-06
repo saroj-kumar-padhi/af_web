@@ -151,7 +151,7 @@ class Scard extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.02,
         ),
-        InkWell(
+        (text == 'Etisalat' || text == 'AWCC')?SizedBox():InkWell(
           onTap: () {
             if (text == "Salaam" && text1 == "Internet Data Bundle") {
               Get.to(() => IbSalaamWb());
