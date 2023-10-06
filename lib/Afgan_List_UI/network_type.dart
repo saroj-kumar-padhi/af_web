@@ -1,4 +1,9 @@
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
+import 'package:afghan_net/Afgan_List_UI/topUpCard/AWCC_t.dart';
+import 'package:afghan_net/Afgan_List_UI/topUpCard/etisalat_t.dart';
+import 'package:afghan_net/Afgan_List_UI/topUpCard/mtn_t.dart';
+import 'package:afghan_net/Afgan_List_UI/topUpCard/roshan_t.dart';
+import 'package:afghan_net/Afgan_List_UI/topUpCard/salaam_t.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +41,9 @@ class NetworTypePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
-                  onTap: () => Get.to(() => Scard(
+                  onTap: () =>
+                  text == 'Top up Card'?Get.to(()=>SalaamT()):
+                   Get.to(() => Scard(
                         text: "Salaam",
                         imageUrl: image,
                         text1: text,
@@ -44,7 +51,7 @@ class NetworTypePage extends StatelessWidget {
                   child: CustomWallet5(
                       text: 'Salaam', image: 'assets/salaam1.png')),
               InkWell(
-                onTap: () => Get.to(() => Scard(
+                onTap: () => text == 'Top up Card'?Get.to(()=>AWCCT()) : Get.to(() => Scard(
                       text: 'AWCC',
                       imageUrl: image,
                       text1: text,
@@ -60,7 +67,8 @@ class NetworTypePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(
-                onTap: () => Get.to(() => Scard(
+                onTap: () => text == 'Top up Card'?Get.to(()=>MtnT()) : Get.to(() =>
+                Scard(
                       text: 'MTN',
                       imageUrl: image,
                       text1: text,
@@ -68,7 +76,7 @@ class NetworTypePage extends StatelessWidget {
                 child: CustomWallet5(text: 'MTN', image: 'assets/MTN1.jpeg'),
               ),
               InkWell(
-                onTap: () => Get.to(() => Scard(
+                onTap: () =>text == 'Top up Card'?Get.to(()=>RoshanT()) : Get.to(() => Scard(
                       text: 'Roshan',
                       imageUrl: image,
                       text1: text,
@@ -82,7 +90,7 @@ class NetworTypePage extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.02,
           ),
           InkWell(
-            onTap: () => Get.to(() => Scard(
+            onTap: () =>text == 'Top up Card'?Get.to(()=>ETisalatT()) : Get.to(() => Scard(
                   text: 'Etisalat',
                   imageUrl: image,
                   text1: text,
