@@ -3,6 +3,7 @@ import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/iran.dart/iran_networktype.dart';
 import 'package:afghan_net/iran.dart/iran_recharge.dart';
 import 'package:afghan_net/Afgan_List_UI/network_type.dart';
+import 'package:afghan_net/iran.dart/list.dart/top_up/topUp.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -45,7 +46,7 @@ class IranList extends StatelessWidget {
               Center(
                 child: InkWell(
                   onTap: () {
-                    Get.to(IranNetworkType());
+                    Get.to(TopUpIran());
                   },
                   child: const ListViewContainer(
                     items2: 'Top Up Card',

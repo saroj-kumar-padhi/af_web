@@ -1,6 +1,12 @@
 import 'package:afghan_net/Afgan_List_UI/afganistan.dart';
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
+import 'package:afghan_net/other_network/crpto_crunnecy/crypto_network.dart';
+import 'package:afghan_net/other_network/diamond.dart';
+import 'package:afghan_net/other_network/pubg.dart';
+import 'package:afghan_net/other_network/tikTok.dart';
+import 'package:afghan_net/other_network/vimo.dart';
 import 'package:afghan_net/other_network/vpn_category.dart';
+import 'package:afghan_net/turkey/turkey.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/iran.dart/iran.dart';
 import 'package:afghan_net/widgets/text.dart';
@@ -64,17 +70,26 @@ class ListViewPage extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.027,
           ),
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-            CustomWallet3(
-              text: 'Vimo USD',
-              image: 'assets/vimo.jpeg',
+            InkWell(
+              onTap: () => Get.to(() => VimoPage()),
+              child: CustomWallet3(
+                text: 'Vimo USD',
+                image: 'assets/vimo.jpeg',
+              ),
             ),
-            CustomWallet3(
-              text: 'UC PUBG',
-              image: 'assets/pubg.jpeg',
+            InkWell(
+              onTap: () => Get.to(() => PubgPage()),
+              child: CustomWallet3(
+                text: 'UC PUBG',
+                image: 'assets/pubg.jpeg',
+              ),
             ),
-            CustomWallet3(
-              text: 'Imo Diamond',
-              image: 'assets/imo.jpeg',
+            InkWell(
+              onTap: () => Get.to(() => DiamondPage()),
+              child: CustomWallet3(
+                text: 'Imo Diamond',
+                image: 'assets/imo.jpeg',
+              ),
             ),
           ]),
           SizedBox(
@@ -85,9 +100,12 @@ class ListViewPage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                CustomWallet3(
-                  text: 'TikTok Coin',
-                  image: 'assets/tiktok.jpeg',
+                InkWell(
+                  onTap: () => Get.to(() => TikTokPage()),
+                  child: CustomWallet3(
+                    text: 'TikTok Coin',
+                    image: 'assets/tiktok.jpeg',
+                  ),
                 ),
                 InkWell(
                   onTap: () {
@@ -98,59 +116,62 @@ class ListViewPage extends StatelessWidget {
                     image: 'assets/vpn.jpeg',
                   ),
                 ),
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.27,
-                  height: MediaQuery.of(context).size.height * 0.13,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(15.0),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          // spreadRadius: 5,
-                          blurRadius: 6,
-                          offset: Offset(0, 3),
-                        ),
-                      ]),
-                  child: Column(
-                    //mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(
-                          top: 7,
-                        ),
-                        child: Container(
-                          width: MediaQuery.of(context).size.width * 0.18,
-                          height: MediaQuery.of(context).size.height * 0.08,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(100.0),
+                InkWell(
+                  onTap: () => Get.to(() => CCPagr()),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width * 0.27,
+                    height: MediaQuery.of(context).size.height * 0.136,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(15.0),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.5),
+                            // spreadRadius: 5,
+                            blurRadius: 6,
+                            offset: Offset(0, 3),
                           ),
-                          child: ClipOval(
-                            child: Image.asset(
-                              'assets/currency.jpeg', // Replace with your image asset path
-                              width: 100.0,
-                              height: 100.0,
-                              fit: BoxFit.fill,
+                        ]),
+                    child: Column(
+                      //mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            top: 7,
+                          ),
+                          child: Container(
+                            width: MediaQuery.of(context).size.width * 0.18,
+                            height: MediaQuery.of(context).size.height * 0.078,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(100.0),
+                            ),
+                            child: ClipOval(
+                              child: Image.asset(
+                                'assets/currency.jpeg', // Replace with your image asset path
+                                width: 100.0,
+                                height: 60.0,
+                                fit: BoxFit.fill,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Center(
-                        child: CustomText(
-                          text: 'Crypto',
-                          fontSize: 12,
-                          fontWeight: FontWeight.normal,
+                        Center(
+                          child: CustomText(
+                            text: 'Crypto',
+                            fontSize: 11,
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
-                      ),
-                      Center(
-                        child: CustomText(
-                          text: 'Currency',
-                          fontSize: 12,
-                          fontWeight: FontWeight.normal,
-                        ),
-                      )
-                    ],
+                        Center(
+                          child: CustomText(
+                            text: 'Currency',
+                            fontSize: 11,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],

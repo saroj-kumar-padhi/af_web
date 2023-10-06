@@ -4,6 +4,7 @@ import 'package:afghan_net/Afgan_List_UI/product_list.dart';
 import 'package:afghan_net/Afgan_List_UI/status/dialog_box.dart';
 import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/order.dart';
+import 'package:afghan_net/turkey/turkey.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/iran.dart/iran.dart';
 import 'package:afghan_net/widgets/dotted_line.dart';
@@ -69,7 +70,8 @@ class _TabDemoState extends State<TabDemo> with SingleTickerProviderStateMixin {
         children: [
           SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(left: 10, right: 10, top: 15),
+              padding: const EdgeInsets.only(
+                  left: 10, right: 10, top: 15, bottom: 10),
               child: Flexible(
                 child: Column(
                   children: [
@@ -150,84 +152,83 @@ class _TabDemoState extends State<TabDemo> with SingleTickerProviderStateMixin {
               ),
             ),
           ),
-
-        
           Scaffold(
-            
-     
-        body: ListView.builder(
-            itemCount: 20, // Number of items in your list
-            itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.only(left: 8.5, right: 8.5, top: 15),
-                child: InkWell(
-                  onTap: () => _showDialog(),
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.1,
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            // spreadRadius: 5,
-                            blurRadius: 6,
-                            offset: Offset(0, 3),
-                          ),
-                        ]),
-                    child: Row(
-                        // crossAxisAlignment: CrossAxisAlignment.start,
-                        //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          ClipOval(
-                            child: Image.asset(
-                              'assets/etisalat1.png', // Replace with your image asset path
-                              width: 65.0,
-                              height: 70.0,
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(right: 10),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              // crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                CustomText(
-                                  text: 'Product 1',
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold,
+              body: ListView.builder(
+                  itemCount: 20, // Number of items in your list
+                  itemBuilder: (BuildContext context, int index) {
+                    return Padding(
+                      padding:
+                          const EdgeInsets.only(left: 8.5, right: 8.5, top: 15),
+                      child: InkWell(
+                        onTap: () => _showDialog(),
+                        child: Container(
+                          height: MediaQuery.of(context).size.height * 0.1,
+                          width: MediaQuery.of(context).size.width * 0.8,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(15.0),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.5),
+                                  // spreadRadius: 5,
+                                  blurRadius: 6,
+                                  offset: Offset(0, 3),
                                 ),
-                                SizedBox(
-                                  height: MediaQuery.of(context).size.height *
-                                      0.005,
-                                  // width: MediaQuery.of(context).size.width * 0.01,
+                              ]),
+                          child: Row(
+                              // crossAxisAlignment: CrossAxisAlignment.start,
+                              //  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                ClipOval(
+                                  child: Image.asset(
+                                    'assets/etisalat1.png', // Replace with your image asset path
+                                    width: 65.0,
+                                    height: 70.0,
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 32),
-                                  child: CustomText1(text: '781144198'),
+                                  padding: const EdgeInsets.only(right: 10),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    // crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      CustomText(
+                                        text: 'Product 1',
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                      SizedBox(
+                                        height:
+                                            MediaQuery.of(context).size.height *
+                                                0.005,
+                                        // width: MediaQuery.of(context).size.width * 0.01,
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(left: 32),
+                                        child: CustomText1(text: '781144198'),
+                                      ),
+                                    ],
+                                  ),
                                 ),
-                              ],
-                            ),
-                          ),
-                          CustomText1(text: '142.0AF'),
-                          // Icon(
-                          //   iconsList[index],
-                          //   size: 24.0,
-                          //   color: colorList[index],
-                          // ),
-                        ]),
-                  ),
-                ),
-              );
-            }))
+                                CustomText1(text: '142.0AF'),
+                                // Icon(
+                                //   iconsList[index],
+                                //   size: 24.0,
+                                //   color: colorList[index],
+                                // ),
+                              ]),
+                        ),
+                      ),
+                    );
+                  }))
         ],
       ),
     );
-    
   }
-   _showDialog() {
+
+  _showDialog() {
     Get.defaultDialog(
       backgroundColor: Colors.white,
       title: '',

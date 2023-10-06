@@ -7,13 +7,10 @@ import 'package:get/get.dart';
 import '../widgets/subscription_card.dart';
 
 class NetworTypePage extends StatelessWidget {
- final String image;
- final  String text;
+  final String image;
+  final String text;
 
-  const NetworTypePage({
-    required this.image,
-    required this.text,
-  });
+  const NetworTypePage({required this.image, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -40,17 +37,17 @@ class NetworTypePage extends StatelessWidget {
             children: [
               InkWell(
                   onTap: () => Get.to(() => Scard(
-                        imageUrl:
-                            image,
+                        text: "Salaam",
+                        imageUrl: image,
                         text1: text,
                       )),
                   child: CustomWallet5(
                       text: 'Salaam', image: 'assets/salaam1.png')),
               InkWell(
                 onTap: () => Get.to(() => Scard(
-                      imageUrl:
-                          'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
-                      text1: 'Voice Calling',
+                      text: 'AWCC',
+                      imageUrl: image,
+                      text1: text,
                     )),
                 child: CustomWallet5(text: 'AWCC', image: 'assets/AWCC1.png'),
               ),
@@ -64,17 +61,17 @@ class NetworTypePage extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () => Get.to(() => Scard(
-                      imageUrl:
-                          'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
-                      text1: 'Voice Calling',
+                      text: 'MTN',
+                      imageUrl: image,
+                      text1: text,
                     )),
                 child: CustomWallet5(text: 'MTN', image: 'assets/MTN1.jpeg'),
               ),
               InkWell(
                 onTap: () => Get.to(() => Scard(
-                      imageUrl:
-                          'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
-                      text1: 'Voice Calling',
+                      text: 'Roshan',
+                      imageUrl: image,
+                      text1: text,
                     )),
                 child:
                     CustomWallet5(text: 'Roshan', image: 'assets/roshan1.png'),
@@ -86,9 +83,9 @@ class NetworTypePage extends StatelessWidget {
           ),
           InkWell(
             onTap: () => Get.to(() => Scard(
-                  imageUrl:
-                      'assets/WhatsApp Image 2023-09-18 at 10.43.55 PM.jpeg',
-                  text1: 'Voice Calling',
+                  text: 'Etisalat',
+                  imageUrl: image,
+                  text1: text,
                 )),
             child:
                 CustomWallet5(text: 'Etisalat', image: 'assets/etisalat1.png'),
