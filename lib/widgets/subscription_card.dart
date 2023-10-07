@@ -91,15 +91,15 @@ class Scard extends StatelessWidget {
 
             // voice wala
 
-            else if (text == "Salaam" && text1 == "Voice Data Bundle") {
+            else if (text == "Salaam" && text1 == 'Voice Calling Bundle') {
               Get.to(() => VbSalaamMb());
-            } else if (text == "AWCC" && text1 == "Voice Data Bundle") {
+            } else if (text == "AWCC" && text1 == 'Voice Calling Bundle') {
               Get.to(() => VbAWCCMb());
-            } else if (text == 'MTN' && text1 == "Voice Data Bundle") {
+            } else if (text == 'MTN' && text1 == 'Voice Calling Bundle') {
               Get.to(() => MtnMonthlyVc());
-            } else if (text == 'Roshan' && text1 == "Voice Data Bundle") {
+            } else if (text == 'Roshan' && text1 == 'Voice Calling Bundle') {
               Get.to(() => VbRoshanMb());
-            } else if (text == 'Etisalat' && text1 == "Voice Data Bundle") {
+            } else if (text == 'Etisalat' && text1 == 'Voice Calling Bundle') {
               Get.to(() => VbEtisalatMb());
             }
 

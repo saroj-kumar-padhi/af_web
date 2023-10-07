@@ -115,8 +115,8 @@ class HomePage extends StatelessWidget {
             ),
             // Background color as per design (rgba(255, 255, 255, 1))
 
-            child: Expanded(
-              flex: 1,
+            child: Container(
+              height: 200,
               child: CarouselSlider(
                 options: CarouselOptions(
                   aspectRatio: 16 / 9,
