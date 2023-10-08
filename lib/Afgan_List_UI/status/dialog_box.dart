@@ -80,11 +80,11 @@ class OrderPage1 extends StatelessWidget {
                             ),
                           ),
                           CustomText1(text: '142.0AF'),
-                          // Icon(
-                          //   iconsList[index],
-                          //   size: 24.0,
-                          //   color: colorList[index],
-                          // ),
+                          Icon(
+                            iconsList[index],
+                            size: 24.0,
+                            color: colorList[index],
+                          ),
                         ]),
                   ),
                 ),
@@ -103,54 +103,38 @@ class OrderPage1 extends StatelessWidget {
         //crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             Image.asset(
               'assets/images-removebg-preview.png', // Replace with your image asset path
               width: 60.0,
-              height: 90.0,
+              height: 70.0,
               fit: BoxFit.cover,
-            ),
-            Container(
-              width: 70,
-              height: 70,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                // border: Border.all(
-                //   color: Color.fromARGB(
-                //       255, 148, 179, 205), // Set the border color here
-                //   width: 1.0, // Set the border width here
-                // ),
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-              child: Image.asset(
-                "assets/logo9_13_4390-removebg.png", // Replace with your image asset path
-                width: 80.0,
-                height: 80.0,
-                fit: BoxFit.cover,
-              ),
             ),
             Image.asset(
-              'assets/images__2_-removebg-preview (1).png', // Replace with your image asset path
-              width: 30.0,
-              height: 30.0,
+              "assets/logo9_13_4390-removebg.png", // Replace with your image asset path
+              width: 70.0,
+              height: 80.0,
               fit: BoxFit.cover,
             ),
+            // Replace with your image asset path
+            Icon(
+              Icons.close, size: 25,
+              color: const Color.fromARGB(255, 61, 78, 107),
+              //fit: BoxFit.cover,
+            ),
           ]),
-          SizedBox(
-            height: 5,
-          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomText(
                   text: '21-Sep-2023',
-                  fontSize: 9,
+                  fontSize: 10,
                   fontWeight: FontWeight.normal),
               SizedBox(
                 width: 15,
               ),
               CustomText(
-                  text: '12:50PM', fontSize: 9, fontWeight: FontWeight.normal),
+                  text: '12:50PM', fontSize: 10, fontWeight: FontWeight.normal),
             ],
           ),
           SizedBox(

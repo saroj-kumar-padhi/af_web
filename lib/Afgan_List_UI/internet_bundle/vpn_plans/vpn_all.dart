@@ -101,14 +101,24 @@ class All_Drawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.category),
+            leading: Image.asset(
+              'assets/category-icon-2048x2048-n1l7ihy5.png',
+              height: 25,
+              width: 25,
+            ),
+            // const Icon(Icons.category),
             title: const Text(' Category '),
             onTap: () {
               Get.to(() => ListViewPage());
             },
           ),
           ListTile(
-            leading: const Icon(Icons.arrow_outward_rounded),
+            leading: Image.asset(
+              'assets/order.png',
+              height: 25,
+              width: 25,
+            ),
+            //const Icon(Icons.arrow_outward_rounded),
             title: const Text(' Orders '),
             onTap: () {
               Get.to(() => OrderPage1());
@@ -116,7 +126,7 @@ class All_Drawer extends StatelessWidget {
           ),
           ListTile(
             leading: Image.asset(
-              'assets/R.png',
+              'assets/transaction1.jpg',
               height: 25,
               width: 25,
             ),
