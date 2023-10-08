@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/etisalat_m.dart';
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/Afgan_List_UI/product_list.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
@@ -26,13 +27,18 @@ class VbSalaamWb extends StatelessWidget {
         body: ListView.builder(
             itemCount: vbSalaamwb.length, // Number of items in your list
             itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.only(left: 8, right: 8, bottom: 15),
-                child: CustomWallet7(
-                  image: 'assets/salaam1.png',
-                  text: vbSalaamwb[index],
-                  text2: vbSalaamwb12[index],
-                  text1: vbSalaamwb2[index],
+              return InkWell(
+                onTap: (){
+                  showDialogPhone();
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 8, right: 8, bottom: 15),
+                  child: CustomWallet7(
+                    image: 'assets/salaam1.png',
+                    text: vbSalaamwb[index],
+                    text2: vbSalaamwb12[index],
+                    text1: vbSalaamwb2[index],
+                  ),
                 ),
               );
             }));
