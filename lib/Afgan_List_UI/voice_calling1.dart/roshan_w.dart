@@ -1,3 +1,4 @@
+import 'package:afghan_net/Afgan_List_UI/internet_bundle/etisalat_m.dart';
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/Afgan_List_UI/product_list.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
@@ -26,13 +27,18 @@ class vbRoshanWB extends StatelessWidget {
         body: ListView.builder(
             itemCount: vbRoshanwb.length, // Number of items in your list
             itemBuilder: (BuildContext context, int index) {
-              return Padding(
-                padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
-                child: CustomWallet6(
-                  image: 'assets/roshan1.png',
-                  text: vbRoshanwb[index],
-                  //  text2: 'MTN to MTN',
-                  text1: vbRoshanwb2[index],
+              return InkWell(
+                onTap: (){
+                  showDialogPhone();
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15),
+                  child: CustomWallet6(
+                    image: 'assets/roshan1.png',
+                    text: vbRoshanwb[index],
+                    //  text2: 'MTN to MTN',
+                    text1: vbRoshanwb2[index],
+                  ),
                 ),
               );
             }));

@@ -67,7 +67,7 @@ class VimoPage extends StatelessWidget {
               ),
             ),
             CustomText(
-                text: 'Vimo Account Id:',
+                text: 'Vimo Account No:',
                 fontSize: 15,
                 fontWeight: FontWeight.bold),
             SizedBox(
