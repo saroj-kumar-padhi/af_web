@@ -3,6 +3,7 @@ import 'package:afghan_net/Afgan_List_UI/status/dialog_box.dart';
 import 'package:afghan_net/App_DrawerContents/reseller_management.dart';
 import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/home_page.dart';
+import 'package:afghan_net/other_network/vpn_list.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:afghan_net/widgets/transaction.dart';
@@ -33,17 +34,21 @@ class Vpn_all extends StatelessWidget {
                   onTap: () {
                     Get.defaultDialog(
                       title: "VPN",
+                      backgroundColor: Colors.white,
                       middleText: "Do you want to buy this product?",
-                      backgroundColor: Colors.grey,
-                      titleStyle: TextStyle(color: Colors.white),
-                      middleTextStyle: TextStyle(color: Colors.white),
+                      titleStyle: TextStyle(color: Colors.black),
+                      middleTextStyle: TextStyle(color: Colors.black),
                       textConfirm: "Confirm",
                       textCancel: "Cancel",
-                      cancelTextColor: Colors.white,
-                      confirmTextColor: Colors.white,
+                      cancelTextColor: Colors.black,
+                      confirmTextColor: Colors.black,
                       buttonColor: Colors.blue,
                       barrierDismissible: false,
                       radius: 8,
+                      onConfirm: () {
+                        Get.to(() =>
+                            const VPNOrderPage()); // This will close the dialog.
+                      },
                     );
                   },
                   child: CustomWallet6(
