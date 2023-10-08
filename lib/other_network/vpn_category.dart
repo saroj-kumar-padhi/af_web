@@ -19,7 +19,7 @@ class Vpn_Category extends StatelessWidget {
         drawer: All_Drawer(),
         appBar: AppBar(
           title: Padding(
-            padding: const EdgeInsets.only(left: 80),
+            padding: const EdgeInsets.only(left: 95),
             child: CustomText(
               text: 'VPN',
               fontSize: 19,
@@ -29,7 +29,7 @@ class Vpn_Category extends StatelessWidget {
         ),
         body: Column(children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
+            height: MediaQuery.of(context).size.height * 0.006,
           ),
           InkWell(
             onTap: () => Get.to(() => Irancell()),
@@ -123,7 +123,7 @@ class MyListTile extends StatelessWidget {
                         style: const TextStyle(
                             fontFamily:
                                 'Inter', // Use the fontFamily you specified in pubspec.yaml
-                            fontSize: 20,
+                            fontSize: 15,
                             fontWeight: FontWeight.bold,
                             color: Color.fromRGBO(89, 83, 83,
                                 1)) // You can adjust the weight as needed

@@ -1,10 +1,15 @@
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
+import 'package:afghan_net/Afgan_List_UI/status/dialog_box.dart';
+import 'package:afghan_net/catagory.dart';
+import 'package:afghan_net/order.dart';
 import 'package:afghan_net/widgets/tab_navigate.dart';
 import 'package:afghan_net/widgets/text.dart';
+import 'package:afghan_net/widgets/transaction.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
 
 import 'widgets/contaierwallat.dart';
 
@@ -66,14 +71,14 @@ class HomePage extends StatelessWidget {
                   children: [
                     CustomWallet(
                       text: 'Balance',
-                      text1: '0.0 Toman',
+                      text1: '0.0 AF',
                     ),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.052,
                     ),
                     CustomWallet(
                       text: 'Debit',
-                      text1: '0.0 Toman',
+                      text1: '0.0 AF',
                     ),
                   ],
                 ),
@@ -87,14 +92,14 @@ class HomePage extends StatelessWidget {
                   children: [
                     CustomWallet(
                       text: 'Sales',
-                      text1: '0.0 Toman',
+                      text1: '0.0 AF',
                     ),
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.052,
                     ),
                     CustomWallet(
                       text: 'Benefits',
-                      text1: '0.0 Toman',
+                      text1: '0.0 AF',
                     ),
                   ],
                 ),
@@ -127,14 +132,14 @@ class HomePage extends StatelessWidget {
                   return Builder(
                     builder: (BuildContext context) {
                       return Container(
-                        //  width: MediaQuery.of(context).size.width - 5,
-                        margin: const EdgeInsets.symmetric(horizontal: 3.0),
+                        width: MediaQuery.of(context).size.width * 1,
+                        // margin: const EdgeInsets.symmetric(horizontal: 3.0),
                         decoration: const BoxDecoration(
-                          color: Colors.amber,
+                          color: Colors.white,
                         ),
                         child: Image.asset(
                           imagePath,
-                          fit: BoxFit.cover,
+                          fit: BoxFit.fill,
                         ),
                       );
                     },
@@ -146,19 +151,40 @@ class HomePage extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.02,
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10, right: 10),
-            child: Container(
-              //  width: MediaQuery.of(context).size.height * 0.5,
-              height: MediaQuery.of(context).size.height * 0.5,
-              decoration: const BoxDecoration(
-                // Color.fromRGBO(99, 101, 148, 1),
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(4), topLeft: Radius.circular(4)),
-              ),
-              child: TabDemo(),
+          // Padding(
+          //   padding: const EdgeInsets.only(left: 10, right: 10),
+          //   child: Container(
+          //     //  width: MediaQuery.of(context).size.height * 0.5,
+          //     height: MediaQuery.of(context).size.height * 0.5,
+          //     decoration: const BoxDecoration(
+          //       // Color.fromRGBO(99, 101, 148, 1),
+          //       borderRadius: BorderRadius.only(
+          //           topRight: Radius.circular(4), topLeft: Radius.circular(4)),
+          //     ),
+          //     child:
+
+          //   ),
+          // ),
+          InkWell(
+              onTap: () => Get.to(() => ListViewPage()),
+              child: CustomWallet32(
+                imageItems: 'assets/category-icon-2048x2048-n1l7ihy5.png',
+                text: 'Catagories',
+              )),
+          InkWell(
+              onTap: () => Get.to(() => OrderPage1()),
+              child: CustomWallet32(
+                imageItems: 'assets/order.png',
+                text: 'Orders',
+              )),
+
+          InkWell(
+            onTap: () => Get.to(() => TransactionPage()),
+            child: CustomWallet32(
+              imageItems: 'assets/transaction1.jpg',
+              text: 'Transactions',
             ),
-          ),
+          )
         ]),
       ),
     );

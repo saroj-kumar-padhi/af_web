@@ -697,3 +697,62 @@ class CustomWallet31 extends StatelessWidget {
     );
   }
 }
+
+class CustomWallet32 extends StatelessWidget {
+  final String text;
+  final imageItems;
+
+  CustomWallet32({
+    super.key,
+    required this.text,
+    required this.imageItems,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 15),
+      child: Container(
+        width: MediaQuery.of(context).size.width * 0.92,
+        height: MediaQuery.of(context).size.height * 0.09,
+        decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(15.0),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                // spreadRadius: 5,
+                blurRadius: 6,
+                offset: Offset(0, 3),
+              ),
+            ]),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 25),
+              child: Image.asset(
+                imageItems,
+                height: MediaQuery.of(context).size.height * 0.05,
+                width: MediaQuery.of(context).size.width * 0.13,
+
+                // Adjust the height
+                fit: BoxFit.fill,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 45),
+              child: Text(text,
+                  style: const TextStyle(
+                      fontFamily:
+                          'Inter', // Use the fontFamily you specified in pubspec.yaml
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromRGBO(89, 83, 83, 1))),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

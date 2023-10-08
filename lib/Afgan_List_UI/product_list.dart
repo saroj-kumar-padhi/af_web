@@ -71,6 +71,7 @@ List<String> ibRoshanmb = [
   '2 GB ',
   '4 GB ',
   '4.5 GB ',
+  '9 GB',
   '10.5 GB ',
   '20 GB '
 ];
@@ -165,7 +166,7 @@ List<String> ibSalaammb2 = [
   '1650 AF'
 ];
 
-List<String> ibSalaamwb = ['50 MB'];
+List<String> ibSalaamwb = ['250 MB'];
 List<String> ibSalaamwb2 = ['40 AF'];
 // voice calling
 List<String> vbSalaammb = ['500 minute', '3000 Minute', '70 Minute'];
