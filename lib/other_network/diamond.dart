@@ -60,36 +60,9 @@ class DiamondPage extends StatelessWidget {
               ),
             ),
             CustomText(
-                text: 'Account Name:',
+                text: 'Imo Account no:',
                 fontSize: 15,
                 fontWeight: FontWeight.bold),
-            SizedBox(
-              height: 5,
-            ),
-            Container(
-              height: 40,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 217, 214, 214),
-                borderRadius: BorderRadius.circular(
-                    10.0), // Adjust the border radius as needed
-                border: Border.all(
-                  color: Color.fromRGBO(89, 83, 83, 1),
-                  width: 2.5, // Set the border width here
-                ),
-              ),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  contentPadding:
-                      EdgeInsets.all(12.0), // Adjust padding as needed
-                  border: InputBorder.none, // Remove the default underline
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            CustomText(
-                text: 'Account ID:', fontSize: 15, fontWeight: FontWeight.bold),
             SizedBox(
               height: 5,
             ),
@@ -107,18 +80,27 @@ class DiamondPage extends StatelessWidget {
               ),
               child: TextFormField(
                 keyboardType: TextInputType.phone,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   contentPadding:
                       EdgeInsets.all(12.0), // Adjust padding as needed
                   border: InputBorder.none,
+                  prefixIcon: Padding(
+                    padding: EdgeInsets.only(left: 10, bottom: 5, top: 5),
+                    child: Container(
+                      child:
+                          Text('+1', // Replace with your default country code
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                                color: Color.fromRGBO(89, 83, 83, 1),
+                              )),
+                    ),
+                  ),
                 ),
               ),
             ),
             SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-              height: 15,
+              height: 20,
             ),
             Center(
               child: Container(

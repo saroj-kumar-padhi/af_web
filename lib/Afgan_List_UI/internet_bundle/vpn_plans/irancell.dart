@@ -39,10 +39,10 @@ class Irancell extends StatelessWidget {
                     buttonColor: Colors.blue,
                     barrierDismissible: false,
                     radius: 8,
-                    onConfirm: () {
-                      Get.to(() =>
-                          const VPNOrderPage()); // This will close the dialog.
-                    },
+                    //  onConfirm: () {
+                    //   Get.to(() =>
+                    //       const VPNOrderPage()); // This will close the dialog.
+                    // },
                   );
                 },
                 child: Padding(

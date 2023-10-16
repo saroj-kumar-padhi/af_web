@@ -4,6 +4,7 @@ import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/my_vpn.dart';
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
 import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/iran.dart/iran.dart';
+import 'package:afghan_net/other_network/vpn_list.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:afghan_net/widgets/turkey.dart';
@@ -46,7 +47,7 @@ class Vpn_Category extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () => Get.to(() => MyVpn()),
+            onTap: () => Get.to(() => VPNOrderPage()),
             child: const MyListTile(
               imageItems: 'assets/buy-VPN-anonymously-icon.png',
               item1: 'My VPN',
