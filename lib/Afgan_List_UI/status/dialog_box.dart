@@ -98,49 +98,47 @@ class OrderPage1 extends StatelessWidget {
       title: '',
       titleStyle: TextStyle(fontSize: 0, fontWeight: FontWeight.bold),
       radius: 0.0,
-     
       content: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         // mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-  children: [
-    Padding(
-      padding: const EdgeInsets.only(right: 48),
-      child: Container(
-        alignment: Alignment.centerLeft,
-        child: Image.asset(
-          'assets/images-removebg-preview.png', // Replace with your image asset path
-          width: 60.0,
-          height: 70.0,
-          fit: BoxFit.cover,
-        ),
-      ),
-    ),
-    Padding(
-      padding: const EdgeInsets.only(right: 61),
-      child: Container(
-        alignment: Alignment.center,
-        child: Image.asset(
-          "assets/logo9_13_4390-removebg.png", // Replace with your image asset path
-          width: 70.0,
-          height: 80.0,
-          fit: BoxFit.cover,
-        ),
-      ),
-    ),
-    Container(
-      alignment: Alignment.centerRight,
-      child: Icon(
-        Icons.close,
-        size: 25,
-        color: const Color.fromARGB(255, 61, 78, 107),
-      ),
-    ),
-  ],
-)
-,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 48),
+                child: Container(
+                  alignment: Alignment.centerLeft,
+                  child: Image.asset(
+                    'assets/images-removebg-preview.png', // Replace with your image asset path
+                    width: 60.0,
+                    height: 70.0,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 61),
+                child: Container(
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                    "assets/logo9_13_4390-removebg.png", // Replace with your image asset path
+                    width: 70.0,
+                    height: 80.0,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.centerRight,
+                child: Icon(
+                  Icons.close,
+                  size: 25,
+                  color: const Color.fromARGB(255, 61, 78, 107),
+                ),
+              ),
+            ],
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -225,19 +223,19 @@ class OrderPage1 extends StatelessWidget {
                         fontWeight: FontWeight.normal),
                   ],
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CustomText(
-                        text: 'Price:',
-                        fontSize: 13,
-                        fontWeight: FontWeight.normal),
-                    CustomText(
-                        text: '250 AF',
-                        fontSize: 13,
-                        fontWeight: FontWeight.normal),
-                  ],
-                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //   children: [
+                //     CustomText(
+                //         text: 'Price:',
+                //         fontSize: 13,
+                //         fontWeight: FontWeight.normal),
+                //     CustomText(
+                //         text: '250 AF',
+                //         fontSize: 13,
+                //         fontWeight: FontWeight.normal),
+                //   ],
+                // ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

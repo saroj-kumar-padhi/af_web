@@ -66,37 +66,39 @@ class VimoPage extends StatelessWidget {
                 ),
               ),
             ),
+            // CustomText(
+            //     text: 'Vimo Account no:',
+            //     fontSize: 15,
+            //     fontWeight: FontWeight.bold),
+            // SizedBox(
+            //   height: 5,
+            // ),
+            // Container(
+            //   height: 40,
+            //   decoration: BoxDecoration(
+            //     color: const Color.fromARGB(255, 217, 214, 214),
+            //     borderRadius: BorderRadius.circular(
+            //         10.0), // Adjust the border radius as needed
+            //     border: Border.all(
+            //       color: Color.fromRGBO(89, 83, 83, 1),
+            //       width: 2.5, // Set the border width here
+            //     ),
+            //   ),
+            //   child: TextFormField(
+            //     decoration: const InputDecoration(
+            //       contentPadding:
+            //           EdgeInsets.all(12.0), // Adjust padding as needed
+            //       border: InputBorder.none, // Remove the default underline
+            //     ),
+            //   ),
+            // ),
+            // SizedBox(
+            //   height: 10,
+            // ),
             CustomText(
-                text: 'Vimo Account No:',
+                text: 'Vimo Account no:',
                 fontSize: 15,
                 fontWeight: FontWeight.bold),
-            SizedBox(
-              height: 5,
-            ),
-            Container(
-              height: 40,
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(255, 217, 214, 214),
-                borderRadius: BorderRadius.circular(
-                    10.0), // Adjust the border radius as needed
-                border: Border.all(
-                  color: Color.fromRGBO(89, 83, 83, 1),
-                  width: 2.5, // Set the border width here
-                ),
-              ),
-              child: TextFormField(
-                decoration: const InputDecoration(
-                  contentPadding:
-                      EdgeInsets.all(12.0), // Adjust padding as needed
-                  border: InputBorder.none, // Remove the default underline
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            CustomText(
-                text: 'Phone no:', fontSize: 15, fontWeight: FontWeight.bold),
             SizedBox(
               height: 5,
             ),
@@ -129,9 +131,6 @@ class VimoPage extends StatelessWidget {
                   ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 10,
             ),
             SizedBox(
               height: 15,
