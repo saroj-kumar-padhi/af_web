@@ -1,13 +1,8 @@
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
-import 'package:afghan_net/Afgan_List_UI/product_list.dart';
-import 'package:afghan_net/notificarions.dart';
-import 'package:afghan_net/order.dart';
 import 'package:afghan_net/web/widgets/container.dart';
-import 'package:afghan_net/widgets/dotted_line.dart';
-import 'package:afghan_net/widgets/text.dart';
 import 'package:afghan_net/widgets/textWeb.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class HomePageWeb extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -110,146 +105,82 @@ class HomePageWeb extends StatelessWidget {
                       ],
                     ),
                   )),
-              Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                Column(
+
+         
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomTextWeb1(text: 'Notifications'),
+                   // ethe notification wala call kar di
+     
+                    Column(
+                      children: [
+                        CustomTextWeb1(text: 'Catagory'),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            CustomWalletWeb3(
+                              image: 'assets/afgan.jpg',
+                              text: 'Afghanistan',
+                            ),
+                            CustomWalletWeb3(
+                              image: 'assets/iran.jpeg',
+                              text: 'Iran',
+                            ),
+                            CustomWalletWeb3(
+                              image: 'assets/turkey.jpeg',
+                              text: 'Turkey',
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.1,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            CustomWalletWeb3(
+                              text: 'Vimo USD',
+                              image: 'assets/vimo.jpeg',
+                            ),
+                            CustomWalletWeb3(
+                              text: 'UC PUBG',
+                              image: 'assets/pubg.jpeg',
+                            ),
+                            CustomWalletWeb3(
+                              text: 'Imo Diamond',
+                              image: 'assets/imo.jpeg',
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.1,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            CustomWalletWeb3(
+                              text: 'TikTok Coin',
+                              image: 'assets/tiktok.jpeg',
+                            ),
+                            CustomWalletWeb3(
+                              text: 'VPN',
+                              image: 'assets/vpn.jpeg',
+                            ),
+                            CustomWalletWeb3(
+                                image: 'assets/currency.jpeg',
+                                text: 'Crypto Currency'),
+                          ],
+                        ),
+                      ],
+                    ),
+                    // hello
+
+                      
+                //// ethe order wala paste kar di 
+                    
                   ],
                 ),
-                Column(
-                  children: [
-                    CustomTextWeb1(text: 'Catagory'),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        CustomWalletWeb3(
-                          image: 'assets/afgan.jpg',
-                          text: 'Afghanistan',
-                        ),
-                        CustomWalletWeb3(
-                          image: 'assets/iran.jpeg',
-                          text: 'Iran',
-                        ),
-                        CustomWalletWeb3(
-                          image: 'assets/turkey.jpeg',
-                          text: 'Turkey',
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.02,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        CustomWalletWeb3(
-                          text: 'Vimo USD',
-                          image: 'assets/vimo.jpeg',
-                        ),
-                        CustomWalletWeb3(
-                          text: 'UC PUBG',
-                          image: 'assets/pubg.jpeg',
-                        ),
-                        CustomWalletWeb3(
-                          text: 'Imo Diamond',
-                          image: 'assets/imo.jpeg',
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.02,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        CustomWalletWeb3(
-                          text: 'TikTok Coin',
-                          image: 'assets/tiktok.jpeg',
-                        ),
-                        CustomWalletWeb3(
-                          text: 'VPN',
-                          image: 'assets/vpn.jpeg',
-                        ),
-                        CustomWalletWeb3(
-                            image: 'assets/currency.jpeg',
-                            text: 'Crypto Currency'),
-                      ],
-                    ),
-                  ],
-                ),
-                // ListView.builder(
-                //     itemCount: 20, // Number of items in your list
-                //     itemBuilder: (BuildContext context, int index) {
-                //       return Padding(
-                //         padding:
-                //             const EdgeInsets.only(left: 10, right: 10, top: 15),
-                //         child: InkWell(
-                //           onTap: () => _showDialog(),
-                //           child: Container(
-                //             height: MediaQuery.of(context).size.height * 0.1,
-                //             width: MediaQuery.of(context).size.width * 0.9,
-                //             decoration: BoxDecoration(
-                //                 color: Colors.white,
-                //                 borderRadius: BorderRadius.circular(15.0),
-                //                 boxShadow: [
-                //                   BoxShadow(
-                //                     color: Colors.grey.withOpacity(0.5),
-                //                     // spreadRadius: 5,
-                //                     blurRadius: 6,
-                //                     offset: Offset(0, 3),
-                //                   ),
-                //                 ]),
-                //             child: Row(
-                //                 // crossAxisAlignment: CrossAxisAlignment.start,
-                //                 //  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //                 children: [
-                //                   ClipOval(
-                //                     child: Image.asset(
-                //                       'assets/etisalat1.png', // Replace with your image asset path
-                //                       width: 65.0,
-                //                       height: 70.0,
-                //                       fit: BoxFit.cover,
-                //                     ),
-                //                   ),
-                //                   Padding(
-                //                     padding: const EdgeInsets.only(right: 10),
-                //                     child: Column(
-                //                       mainAxisAlignment:
-                //                           MainAxisAlignment.center,
-                //                       // crossAxisAlignment: CrossAxisAlignment.center,
-                //                       children: [
-                //                         CustomText(
-                //                           text: 'Product 1',
-                //                           fontSize: 14,
-                //                           fontWeight: FontWeight.bold,
-                //                         ),
-                //                         SizedBox(
-                //                           height: MediaQuery.of(context)
-                //                                   .size
-                //                                   .height *
-                //                               0.005,
-                //                           // width: MediaQuery.of(context).size.width * 0.01,
-                //                         ),
-                //                         Padding(
-                //                           padding:
-                //                               const EdgeInsets.only(left: 23),
-                //                           child: CustomText1(text: '781144198'),
-                //                         ),
-                //                       ],
-                //                     ),
-                //                   ),
-                //                   CustomText1(text: '142.0AF'),
-                //                   Icon(
-                //                     iconsList[index],
-                //                     size: 24.0,
-                //                     color: colorList[index],
-                //                   ),
-                //                 ]),
-                //           ),
-                //         ),
-                //       );
-                //     })
-              ])
+             
             ])));
   }
 

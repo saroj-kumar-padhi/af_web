@@ -14,14 +14,12 @@ class OrderPage1 extends StatelessWidget {
     return Scaffold(
         drawer: All_Drawer(),
         appBar: AppBar(
-          title: Padding(
-            padding: const EdgeInsets.only(left: 90),
-            child: CustomText(
-              text: 'Order',
-              fontSize: 19,
-              fontWeight: FontWeight.bold,
-            ),
+          title: CustomText(
+            text: 'Order',
+            fontSize: 19,
+            fontWeight: FontWeight.bold,
           ),
+          centerTitle: true,
         ),
         body: ListView.builder(
             itemCount: 20, // Number of items in your list
