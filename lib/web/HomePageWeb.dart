@@ -1,8 +1,17 @@
 import 'package:afghan_net/Afgan_List_UI/internet_bundle/vpn_plans/vpn_all.dart';
+import 'package:afghan_net/web/catagory/Iran/Iran.dart';
+import 'package:afghan_net/web/catagory/afganistan/afganistan.dart';
+import 'package:afghan_net/web/catagory/crypto/crypto.dart';
+import 'package:afghan_net/web/catagory/diamond/diamond.dart';
+import 'package:afghan_net/web/catagory/pubg/pubg.dart';
+import 'package:afghan_net/web/catagory/tiktok.dart';
+import 'package:afghan_net/web/catagory/turkey/turkey.dart';
+import 'package:afghan_net/web/catagory/vimo/vimo.dart';
+import 'package:afghan_net/web/catagory/vpn/vpn.dart';
 import 'package:afghan_net/web/widgets/container.dart';
 import 'package:afghan_net/widgets/textWeb.dart';
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
 
 class HomePageWeb extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -105,82 +114,104 @@ class HomePageWeb extends StatelessWidget {
                       ],
                     ),
                   )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // ethe notification wala call kar di
 
-         
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                   // ethe notification wala call kar di
-     
-                    Column(
-                      children: [
-                        CustomTextWeb1(text: 'Catagory'),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            CustomWalletWeb3(
+                  Column(
+                    children: [
+                      CustomTextWeb1(text: 'Catagory'),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          InkWell(
+                            onTap: () => Get.to(() => AfganistanPageWeb()),
+                            child: CustomWalletWeb3(
                               image: 'assets/afgan.jpg',
                               text: 'Afghanistan',
                             ),
-                            CustomWalletWeb3(
+                          ),
+                          InkWell(
+                            onTap: () => Get.to(() => IranListWeb()),
+                            child: CustomWalletWeb3(
                               image: 'assets/iran.jpeg',
                               text: 'Iran',
                             ),
-                            CustomWalletWeb3(
+                          ),
+                          InkWell(
+                            onTap: () => Get.to(() => TurkeyListWeb()),
+                            child: CustomWalletWeb3(
                               image: 'assets/turkey.jpeg',
                               text: 'Turkey',
                             ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.1,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            CustomWalletWeb3(
+                          ),
+                        ],
+                      ),
+                      // SizedBox(
+                      //   height: MediaQuery.of(context).size.height * 0.1,
+                      // ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          InkWell(
+                            onTap: () => Get.to(() => VimoPageWeb()),
+                            child: CustomWalletWeb3(
                               text: 'Vimo USD',
                               image: 'assets/vimo.jpeg',
                             ),
-                            CustomWalletWeb3(
+                          ),
+                          InkWell(
+                            onTap: () => Get.to(() => PubgPageWeb()),
+                            child: CustomWalletWeb3(
                               text: 'UC PUBG',
                               image: 'assets/pubg.jpeg',
                             ),
-                            CustomWalletWeb3(
+                          ),
+                          InkWell(
+                            onTap: () => Get.to(() => DiamondPageWeb()),
+                            child: CustomWalletWeb3(
                               text: 'Imo Diamond',
                               image: 'assets/imo.jpeg',
                             ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.1,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            CustomWalletWeb3(
+                          ),
+                        ],
+                      ),
+                      // SizedBox(
+                      //   height: MediaQuery.of(context).size.height * 0.1,
+                      // ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          InkWell(
+                            onTap: () => Get.to(() => TikTokPageWeb()),
+                            child: CustomWalletWeb3(
                               text: 'TikTok Coin',
                               image: 'assets/tiktok.jpeg',
                             ),
-                            CustomWalletWeb3(
+                          ),
+                          InkWell(
+                            onTap: () => Get.to(() => Vpn_CategoryWeb()),
+                            child: CustomWalletWeb3(
                               text: 'VPN',
                               image: 'assets/vpn.jpeg',
                             ),
-                            CustomWalletWeb3(
+                          ),
+                          InkWell(
+                            onTap: () => Get.to(() => CCPagrWeb()),
+                            child: CustomWalletWeb3(
                                 image: 'assets/currency.jpeg',
                                 text: 'Crypto Currency'),
-                          ],
-                        ),
-                      ],
-                    ),
-                    // hello
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  // hello
 
-                      
-                //// ethe order wala paste kar di 
-                    
-                  ],
-                ),
-             
+                  //// ethe order wala paste kar di
+                ],
+              ),
             ])));
   }
 
