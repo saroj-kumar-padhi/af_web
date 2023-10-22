@@ -33,79 +33,83 @@ class NetworTypePageWeb extends StatelessWidget {
         ),
       ),
       //  backgroundColor: Color.fromARGB(255, 206, 203, 203),
-      body: Column(
+      body: ListView(
         children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.05,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          Column(
             children: [
-              InkWell(
-                  onTap: () => text == 'Top up Card'
-                      ? Get.to(() => SalaamT())
-                      : Get.to(() => ScardWeb(
-                            text: "Salaam",
-                            imageUrl: image,
-                            text1: text,
-                          )),
-                  child: CustomWallet5Web(
-                      text: 'Salaam', image: 'assets/salaam1.png')),
-              InkWell(
-                onTap: () => text == 'Top up Card'
-                    ? Get.to(() => AWCCT())
-                    : Get.to(() => ScardWeb(
-                          text: 'AWCC',
-                          imageUrl: image,
-                          text1: text,
-                        )),
-                child:
-                    CustomWallet5Web(text: 'AWCC', image: 'assets/AWCC1.png'),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.05,
               ),
-            ],
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              InkWell(
-                onTap: () => text == 'Top up Card'
-                    ? Get.to(() => MtnT())
-                    : Get.to(() => ScardWeb(
-                          text: 'MTN',
-                          imageUrl: image,
-                          text1: text,
-                        )),
-                child: CustomWallet5Web(text: 'MTN', image: 'assets/MTN1.jpeg'),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  InkWell(
+                      onTap: () => text == 'Top up Card'
+                          ? Get.to(() => SalaamT())
+                          : Get.to(() => ScardWeb(
+                                text: "Salaam",
+                                imageUrl: image,
+                                text1: text,
+                              )),
+                      child: CustomWallet5Web(
+                          text: 'Salaam', image: 'assets/salaam1.png')),
+                  InkWell(
+                    onTap: () => text == 'Top up Card'
+                        ? Get.to(() => AWCCT())
+                        : Get.to(() => ScardWeb(
+                              text: 'AWCC',
+                              imageUrl: image,
+                              text1: text,
+                            )),
+                    child:
+                        CustomWallet5Web(text: 'AWCC', image: 'assets/AWCC1.png'),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  InkWell(
+                    onTap: () => text == 'Top up Card'
+                        ? Get.to(() => MtnT())
+                        : Get.to(() => ScardWeb(
+                              text: 'MTN',
+                              imageUrl: image,
+                              text1: text,
+                            )),
+                    child: CustomWallet5Web(text: 'MTN', image: 'assets/MTN1.jpeg'),
+                  ),
+                  InkWell(
+                    onTap: () => text == 'Top up Card'
+                        ? Get.to(() => RoshanT())
+                        : Get.to(() => ScardWeb(
+                              text: 'Roshan',
+                              imageUrl: image,
+                              text1: text,
+                            )),
+                    child: CustomWallet5Web(
+                        text: 'Roshan', image: 'assets/roshan1.png'),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
               ),
               InkWell(
                 onTap: () => text == 'Top up Card'
-                    ? Get.to(() => RoshanT())
+                    ? Get.to(() => ETisalatT())
                     : Get.to(() => ScardWeb(
-                          text: 'Roshan',
+                          text: 'Etisalat',
                           imageUrl: image,
                           text1: text,
                         )),
                 child: CustomWallet5Web(
-                    text: 'Roshan', image: 'assets/roshan1.png'),
+                    text: 'Etisalat', image: 'assets/etisalat1.png'),
               ),
             ],
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.02,
-          ),
-          InkWell(
-            onTap: () => text == 'Top up Card'
-                ? Get.to(() => ETisalatT())
-                : Get.to(() => ScardWeb(
-                      text: 'Etisalat',
-                      imageUrl: image,
-                      text1: text,
-                    )),
-            child: CustomWallet5Web(
-                text: 'Etisalat', image: 'assets/etisalat1.png'),
           ),
         ],
       ),
