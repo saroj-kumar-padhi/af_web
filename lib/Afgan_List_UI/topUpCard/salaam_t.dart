@@ -11,17 +11,16 @@ class SalaamT extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
         drawer: All_Drawer(),
+        
         appBar: AppBar(
-          title: Padding(
-            padding: const EdgeInsets.only(
-              left: 90,
-            ),
-            child: CustomText(
-              text: 'Salaam',
-              fontSize: 19,
-              fontWeight: FontWeight.bold,
-            ),
+          centerTitle: true,
+          title: CustomText(
+            text: 'Salaam',
+            fontSize: 19,
+            fontWeight: FontWeight.bold,
+            
           ),
         ),
         body: ListView.builder(

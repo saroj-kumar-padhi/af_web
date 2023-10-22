@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class CustomTextWeb1 extends StatelessWidget {
   final String text;
@@ -14,7 +15,7 @@ class CustomTextWeb1 extends StatelessWidget {
       // textAlign: TextAlign.center,
       style: TextStyle(
         fontFamily: 'Inter',
-        fontSize: 35,
+        fontSize: 12.sp,
         fontWeight: FontWeight.bold,
         color: Colors.black,
       ),

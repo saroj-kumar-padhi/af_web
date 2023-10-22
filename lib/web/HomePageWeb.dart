@@ -21,201 +21,193 @@ class HomePageWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(60.0), // Adjust the height as needed
-          child: AppBar(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.4,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60.0),
+        child: AppBar(
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(
+                // width: MediaQuery.of(context).size.width * 0.4,
+              ),
+              CustomTextWeb1(text: 'Seller'),
+              // SizedBox(
+              //   width: MediaQuery.of(context).size.width * 0.4,
+              // ),
+              ClipOval(
+                child: Image.asset(
+                  'assets/th.jpg',
+                  height: 75,
+                  width: 70,
+                  fit: BoxFit.fill,
                 ),
-                CustomTextWeb1(text: 'Seller'),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.4,
-                ),
-                ClipOval(
-                  child: Image.asset(
-                    'assets/th.jpg',
-                    height: 75,
-                    width: 70,
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
-        key: _scaffoldKey,
-        drawer: All_Drawer(),
-        body: SingleChildScrollView(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                //crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
-              ),
-              Align(
-                  alignment: Alignment.topCenter,
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.6,
-                    width: MediaQuery.of(context).size.width * 0.7,
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 223, 217, 217),
-                        borderRadius: BorderRadius.circular(12.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            // spreadRadius: 2,
-                            blurRadius: 3,
-                            //  offset: Offset(0, 3),
-                          ),
-                        ]),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
+      ),
+      drawer: All_Drawer(),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
+            ),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.6,
+                width: MediaQuery.of(context).size.width * 0.7,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 223, 217, 217),
+                  borderRadius: BorderRadius.circular(12.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      blurRadius: 3,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            CustomWalletWeb(
-                              text: 'Balance',
-                              text1: '0.0 AF',
-                            ),
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.052,
-                            ),
-                            CustomWalletWeb(
-                              text: 'Debit',
-                              text1: '0.0 AF',
-                            ),
-                          ],
+                        CustomWalletWeb(
+                          text: 'Balance',
+                          text1: '0.0 AF',
                         ),
                         SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.05,
+                          width: MediaQuery.of(context).size.width * 0.052,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            CustomWalletWeb(
-                              text: 'Sales',
-                              text1: '0.0 AF',
-                            ),
-                            SizedBox(
-                              width: MediaQuery.of(context).size.width * 0.052,
-                            ),
-                            CustomWalletWeb(
-                              text: 'Benefits',
-                              text1: '0.0 AF',
-                            ),
-                          ],
+                        CustomWalletWeb(
+                          text: 'Debit',
+                          text1: '0.0 AF',
                         ),
                       ],
                     ),
-                  )),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  // ethe notification wala call kar di
-
-                  Column(
-                    children: [
-                      CustomTextWeb1(text: 'Catagory'),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          InkWell(
-                            onTap: () => Get.to(() => AfganistanPageWeb()),
-                            child: CustomWalletWeb3(
-                              image: 'assets/afgan.jpg',
-                              text: 'Afghanistan',
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () => Get.to(() => IranListWeb()),
-                            child: CustomWalletWeb3(
-                              image: 'assets/iran.jpeg',
-                              text: 'Iran',
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () => Get.to(() => TurkeyListWeb()),
-                            child: CustomWalletWeb3(
-                              image: 'assets/turkey.jpeg',
-                              text: 'Turkey',
-                            ),
-                          ),
-                        ],
-                      ),
-                      // SizedBox(
-                      //   height: MediaQuery.of(context).size.height * 0.1,
-                      // ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          InkWell(
-                            onTap: () => Get.to(() => VimoPageWeb()),
-                            child: CustomWalletWeb3(
-                              text: 'Vimo USD',
-                              image: 'assets/vimo.jpeg',
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () => Get.to(() => PubgPageWeb()),
-                            child: CustomWalletWeb3(
-                              text: 'UC PUBG',
-                              image: 'assets/pubg.jpeg',
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () => Get.to(() => DiamondPageWeb()),
-                            child: CustomWalletWeb3(
-                              text: 'Imo Diamond',
-                              image: 'assets/imo.jpeg',
-                            ),
-                          ),
-                        ],
-                      ),
-                      // SizedBox(
-                      //   height: MediaQuery.of(context).size.height * 0.1,
-                      // ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          InkWell(
-                            onTap: () => Get.to(() => TikTokPageWeb()),
-                            child: CustomWalletWeb3(
-                              text: 'TikTok Coin',
-                              image: 'assets/tiktok.jpeg',
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () => Get.to(() => Vpn_CategoryWeb()),
-                            child: CustomWalletWeb3(
-                              text: 'VPN',
-                              image: 'assets/vpn.jpeg',
-                            ),
-                          ),
-                          InkWell(
-                            onTap: () => Get.to(() => CCPagrWeb()),
-                            child: CustomWalletWeb3(
-                                image: 'assets/currency.jpeg',
-                                text: 'Crypto Currency'),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  // hello
-
-                  //// ethe order wala paste kar di
-                ],
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.05,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        CustomWalletWeb(
+                          text: 'Sales',
+                          text1: '0.0 AF',
+                        ),
+                        SizedBox(
+                          width: MediaQuery.of(context).size.width * 0.052,
+                        ),
+                        CustomWalletWeb(
+                          text: 'Benefits',
+                          text1: '0.0 AF',
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ])));
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  children: [
+                    CustomTextWeb1(text: 'Catagory'),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        InkWell(
+                          onTap: () => Get.to(() => AfganistanPageWeb()),
+                          child: CustomWalletWeb3(
+                            image: 'assets/afgan.jpg',
+                            text: 'Afghanistan',
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.to(() => IranListWeb()),
+                          child: CustomWalletWeb3(
+                            image: 'assets/iran.jpeg',
+                            text: 'Iran',
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.to(() => TurkeyListWeb()),
+                          child: CustomWalletWeb3(
+                            image: 'assets/turkey.jpeg',
+                            text: 'Turkey',
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        InkWell(
+                          onTap: () => Get.to(() => VimoPageWeb()),
+                          child: CustomWalletWeb3(
+                            text: 'Vimo USD',
+                            image: 'assets/vimo.jpeg',
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.to(() => PubgPageWeb()),
+                          child: CustomWalletWeb3(
+                            text: 'UC PUBG',
+                            image: 'assets/pubg.jpeg',
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.to(() => DiamondPageWeb()),
+                          child: CustomWalletWeb3(
+                            text: 'Imo Diamond',
+                            image: 'assets/imo.jpeg',
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        InkWell(
+                          onTap: () => Get.to(() => TikTokPageWeb()),
+                          child: CustomWalletWeb3(
+                            text: 'TikTok Coin',
+                            image: 'assets/tiktok.jpeg',
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.to(() => Vpn_CategoryWeb()),
+                          child: CustomWalletWeb3(
+                            text: 'VPN',
+                            image: 'assets/vpn.jpeg',
+                          ),
+                        ),
+                        InkWell(
+                          onTap: () => Get.to(() => CCPagrWeb()),
+                          child: CustomWalletWeb3(
+                              image: 'assets/currency.jpeg',
+                              text: 'Crypto Currency'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );;
   }
 
-  // _showDialog() {
+}
+
+ // _showDialog() {
   //   Get.defaultDialog(
   //       backgroundColor: Colors.white,
   //       title: '',
@@ -435,4 +427,4 @@ class HomePageWeb extends StatelessWidget {
   //         ],
   //       ));
   // }
-}
+

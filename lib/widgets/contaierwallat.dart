@@ -365,7 +365,7 @@ class CustomWallet6 extends StatelessWidget {
           // ),
         ),
         Container(
-          width: MediaQuery.of(context).size.width * 0.2,
+          width: MediaQuery.of(context).size.width * 0.1,
           height: MediaQuery.of(context).size.height * 0.07,
           decoration: BoxDecoration(
               color: Colors.white,

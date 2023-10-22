@@ -2,6 +2,7 @@ import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:sizer/sizer.dart';
 
 class CustomWalletWeb extends StatelessWidget {
   final String text;
@@ -11,8 +12,8 @@ class CustomWalletWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.25,
-      height: MediaQuery.of(context).size.height * 0.2,
+      width: 20.w,
+      height: 20.h,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8.0),
@@ -34,7 +35,9 @@ class CustomWalletWeb extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 25, left: 20),
                 child: CustomText(
                   text: text,
-                  fontSize: 25,
+
+                  
+                  fontSize: 6.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),

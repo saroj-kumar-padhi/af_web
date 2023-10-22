@@ -23,6 +23,7 @@ import 'package:afghan_net/Afgan_List_UI/voice_calling1.dart/salaam_m.dart';
 import 'package:afghan_net/Afgan_List_UI/voice_calling1.dart/salaam_w.dart';
 import 'package:afghan_net/recharge.dart';
 import 'package:afghan_net/web/catagory/afganistan/Network/Bundles/Internet_Bundle/salaam.dart';
+import 'package:afghan_net/web/catagory/afganistan/Network/Bundles/Internet_Bundle/salaam_w.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -164,7 +165,7 @@ class ScardWeb extends StatelessWidget {
             : InkWell(
                 onTap: () {
                   if (text == "Salaam" && text1 == "Internet Data Bundle") {
-                    Get.to(() => IbSalaamWb());
+                    Get.to(() => IbWSalaamWb());
                   } else if (text == "AWCC" &&
                       text1 == "Internet Data Bundle") {
                     Get.to(() => IbAWCCWb());

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
 class CustomText extends StatelessWidget {
   final String text;
@@ -13,9 +14,9 @@ class CustomText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double fontSizeInDP1 = 12.0;
-    double fontSizeInDP = 16.0;
-    double fontSizeInDP5 = 14.0;
+    double fontSizeInDP1 = 12.0.sp;
+    double fontSizeInDP = 16.0.sp;
+    double fontSizeInDP5 = 14.0.sp;
     return Text(text,
         softWrap: true,
         //'Address Details',

@@ -13,15 +13,11 @@ class IbAWCCWb extends StatelessWidget {
     return Scaffold(
         drawer: All_Drawer(),
         appBar: AppBar(
-          title: Padding(
-            padding: const EdgeInsets.only(
-              left: 90,
-            ),
-            child: CustomText(
-              text: 'Weekly',
-              fontSize: 19,
-              fontWeight: FontWeight.bold,
-            ),
+          centerTitle: true,
+          title: CustomText(
+            text: 'Weekly',
+            fontSize: 19,
+            fontWeight: FontWeight.bold,
           ),
         ),
         body: ListView.builder(
