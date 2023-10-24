@@ -12,8 +12,8 @@ class CustomWalletWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 20.w,
-      height: 20.h,
+      width: 35.w,
+      height: 10.h,
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8.0),
@@ -35,9 +35,7 @@ class CustomWalletWeb extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 25, left: 20),
                 child: CustomText(
                   text: text,
-
-                  
-                  fontSize: 6.sp,
+                  fontSize: 10.sp,
                   fontWeight: FontWeight.bold,
                 ),
               ),

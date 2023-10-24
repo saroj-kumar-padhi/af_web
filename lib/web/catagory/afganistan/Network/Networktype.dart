@@ -6,6 +6,7 @@ import 'package:afghan_net/Afgan_List_UI/topUpCard/roshan_t.dart';
 import 'package:afghan_net/Afgan_List_UI/topUpCard/salaam_t.dart';
 import 'package:afghan_net/web/catagory/afganistan/Network/scard.dart';
 import 'package:afghan_net/web/catagory/afganistan/widgets.dart';
+import 'package:afghan_net/web/drawer/drawer.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/widgets/subscription_card.dart';
 import 'package:afghan_net/widgets/text.dart';
@@ -21,7 +22,7 @@ class NetworTypePageWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: All_Drawer(),
+      drawer: All_Drawer_Web(),
       appBar: AppBar(
         title: Align(
           alignment: Alignment.center,
@@ -61,8 +62,8 @@ class NetworTypePageWeb extends StatelessWidget {
                               imageUrl: image,
                               text1: text,
                             )),
-                    child:
-                        CustomWallet5Web(text: 'AWCC', image: 'assets/AWCC1.png'),
+                    child: CustomWallet5Web(
+                        text: 'AWCC', image: 'assets/AWCC1.png'),
                   ),
                 ],
               ),
@@ -80,7 +81,8 @@ class NetworTypePageWeb extends StatelessWidget {
                               imageUrl: image,
                               text1: text,
                             )),
-                    child: CustomWallet5Web(text: 'MTN', image: 'assets/MTN1.jpeg'),
+                    child: CustomWallet5Web(
+                        text: 'MTN', image: 'assets/MTN1.jpeg'),
                   ),
                   InkWell(
                     onTap: () => text == 'Top up Card'

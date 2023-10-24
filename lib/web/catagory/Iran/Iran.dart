@@ -7,6 +7,7 @@ import 'package:afghan_net/iran.dart/list.dart/top_up/topUp.dart';
 import 'package:afghan_net/web/catagory/Iran/Network/Bundle/topup.dart';
 import 'package:afghan_net/web/catagory/Iran/Network/networktype.dart';
 import 'package:afghan_net/web/catagory/afganistan/widgets.dart';
+import 'package:afghan_net/web/drawer/drawer.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,7 +19,7 @@ class IranListWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: All_Drawer(),
+        drawer: All_Drawer_Web(),
         appBar: AppBar(
           title: Align(
             alignment: Alignment.center,

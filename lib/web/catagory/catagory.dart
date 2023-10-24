@@ -7,6 +7,17 @@ import 'package:afghan_net/other_network/tikTok.dart';
 import 'package:afghan_net/other_network/vimo.dart';
 import 'package:afghan_net/other_network/vpn_category.dart';
 import 'package:afghan_net/turkey/turkey.dart';
+import 'package:afghan_net/web/catagory/Iran/Iran.dart';
+import 'package:afghan_net/web/catagory/afganistan/afganistan.dart';
+import 'package:afghan_net/web/catagory/crypto/crypto.dart';
+import 'package:afghan_net/web/catagory/diamond/diamond.dart';
+import 'package:afghan_net/web/catagory/pubg/pubg.dart';
+import 'package:afghan_net/web/catagory/tiktok.dart';
+import 'package:afghan_net/web/catagory/turkey/turkey.dart';
+import 'package:afghan_net/web/catagory/vimo/vimo.dart';
+import 'package:afghan_net/web/catagory/vpn/vpn.dart';
+import 'package:afghan_net/web/drawer/drawer.dart';
+import 'package:afghan_net/web/widgets/container.dart';
 import 'package:afghan_net/widgets/contaierwallat.dart';
 import 'package:afghan_net/iran.dart/iran.dart';
 import 'package:afghan_net/widgets/text.dart';
@@ -14,19 +25,19 @@ import 'package:afghan_net/widgets/turkey.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ListViewPage extends StatelessWidget {
-  ListViewPage({super.key});
+class Catagory_web extends StatelessWidget {
+  Catagory_web({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: All_Drawer(),
+        drawer: All_Drawer_Web(),
         appBar: AppBar(
-          title: Padding(
-            padding: const EdgeInsets.only(left: 80),
+          title: Align(
+            alignment: Alignment.center,
             child: CustomText(
               text: 'Catagory',
-              fontSize: 19,
+              fontSize: 30,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -36,146 +47,91 @@ class ListViewPage extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.01,
           ),
-          InkWell(
-            onTap: () => Get.to(() => AfganistanPage()),
-            child: const MyListTile(
-              imageItems: 'assets/afgan.jpg',
-              items2: 'Credit Card',
-              items3: 'Internet Bundle',
-              item1: 'Afganistan',
-              items4: 'Voice Calling Bundle',
-            ),
-          ),
-          InkWell(
-            onTap: () => Get.to(() => IranList()),
-            child: const MyListTile(
-              imageItems: 'assets/iran.jpeg',
-              items2: 'Credit Card',
-              items3: 'Internet Bundle',
-              item1: 'Iran',
-              items4: 'Voice Calling Bundle',
-            ),
-          ),
-          InkWell(
-            onTap: () => Get.to(() => TurkeyList()),
-            child: const MyListTile(
-              imageItems: 'assets/turkey.jpeg',
-              items2: 'Credit Card',
-              items3: 'Internet Bundle',
-              item1: 'Turkey',
-              items4: 'Voice Calling Bundle',
-            ),
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.027,
-          ),
-          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-            InkWell(
-              onTap: () => Get.to(() => VimoPage()),
-              child: CustomWallet3(
-                text: 'Vimo USD',
-                image: 'assets/vimo.jpeg',
-              ),
-            ),
-            InkWell(
-              onTap: () => Get.to(() => PubgPage()),
-              child: CustomWallet3(
-                text: 'UC PUBG',
-                image: 'assets/pubg.jpeg',
-              ),
-            ),
-            InkWell(
-              onTap: () => Get.to(() => DiamondPage()),
-              child: CustomWallet3(
-                text: 'Imo Diamond',
-                image: 'assets/imo.jpeg',
-              ),
-            ),
-          ]),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.027,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                InkWell(
-                  onTap: () => Get.to(() => TikTokPage()),
-                  child: CustomWallet3(
-                    text: 'TikTok Coin',
-                    image: 'assets/tiktok.jpeg',
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    Get.to(Vpn_Category());
-                  },
-                  child: CustomWallet3(
-                    text: 'VPN',
-                    image: 'assets/vpn.jpeg',
-                  ),
-                ),
-                InkWell(
-                  onTap: () => Get.to(() => CCPagr()),
-                  child: Container(
-                    width: MediaQuery.of(context).size.width * 0.27,
-                    height: MediaQuery.of(context).size.height * 0.136,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15.0),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            // spreadRadius: 5,
-                            blurRadius: 6,
-                            offset: Offset(0, 3),
-                          ),
-                        ]),
-                    child: Column(
-                      //mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            top: 7,
-                          ),
-                          child: Container(
-                            width: MediaQuery.of(context).size.width * 0.18,
-                            height: MediaQuery.of(context).size.height * 0.078,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(100.0),
-                            ),
-                            child: ClipOval(
-                              child: Image.asset(
-                                'assets/currency.jpeg', // Replace with your image asset path
-                                width: 100.0,
-                                height: 60.0,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      InkWell(
+                        onTap: () => Get.to(() => AfganistanPageWeb()),
+                        child: CustomWalletWeb3(
+                          image: 'assets/afgan.jpg',
+                          text: 'Afghanistan',
                         ),
-                        Center(
-                          child: CustomText(
-                            text: 'Crypto',
-                            fontSize: 11,
-                            fontWeight: FontWeight.normal,
-                          ),
+                      ),
+                      InkWell(
+                        onTap: () => Get.to(() => IranListWeb()),
+                        child: CustomWalletWeb3(
+                          image: 'assets/iran.jpeg',
+                          text: 'Iran',
                         ),
-                        Center(
-                          child: CustomText(
-                            text: 'Currency',
-                            fontSize: 11,
-                            fontWeight: FontWeight.normal,
-                          ),
-                        )
-                      ],
-                    ),
+                      ),
+                      InkWell(
+                        onTap: () => Get.to(() => TurkeyListWeb()),
+                        child: CustomWalletWeb3(
+                          image: 'assets/turkey.jpeg',
+                          text: 'Turkey',
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
-            ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      InkWell(
+                        onTap: () => Get.to(() => VimoPageWeb()),
+                        child: CustomWalletWeb3(
+                          text: 'Vimo USD',
+                          image: 'assets/vimo.jpeg',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () => Get.to(() => PubgPageWeb()),
+                        child: CustomWalletWeb3(
+                          text: 'UC PUBG',
+                          image: 'assets/pubg.jpeg',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () => Get.to(() => DiamondPageWeb()),
+                        child: CustomWalletWeb3(
+                          text: 'Imo Diamond',
+                          image: 'assets/imo.jpeg',
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      InkWell(
+                        onTap: () => Get.to(() => TikTokPageWeb()),
+                        child: CustomWalletWeb3(
+                          text: 'TikTok Coin',
+                          image: 'assets/tiktok.jpeg',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () => Get.to(() => Vpn_CategoryWeb()),
+                        child: CustomWalletWeb3(
+                          text: 'VPN',
+                          image: 'assets/vpn.jpeg',
+                        ),
+                      ),
+                      InkWell(
+                        onTap: () => Get.to(() => CCPagrWeb()),
+                        child: CustomWalletWeb3(
+                            image: 'assets/currency.jpeg',
+                            text: 'Crypto Currency'),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
           ),
         ]));
   }
@@ -202,7 +158,7 @@ class MyListTile extends StatelessWidget {
     return ListTile(
         title: Container(
       width: MediaQuery.of(context).size.width * 0.9,
-      height: MediaQuery.of(context).size.height * 0.15,
+      height: MediaQuery.of(context).size.height * 0.12,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10.0),

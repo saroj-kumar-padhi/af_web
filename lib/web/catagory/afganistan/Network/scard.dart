@@ -24,6 +24,7 @@ import 'package:afghan_net/Afgan_List_UI/voice_calling1.dart/salaam_w.dart';
 import 'package:afghan_net/recharge.dart';
 import 'package:afghan_net/web/catagory/afganistan/Network/Bundles/Internet_Bundle/salaam.dart';
 import 'package:afghan_net/web/catagory/afganistan/Network/Bundles/Internet_Bundle/salaam_w.dart';
+import 'package:afghan_net/web/drawer/drawer.dart';
 import 'package:afghan_net/widgets/text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -41,7 +42,7 @@ class ScardWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: All_Drawer(),
+      drawer: All_Drawer_Web(),
       appBar: AppBar(
         title: Align(
           alignment: Alignment.center,
