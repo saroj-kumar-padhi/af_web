@@ -3,14 +3,16 @@ import 'package:afghan_net/Afgan_List_UI/status/dialog_box.dart';
 import 'package:afghan_net/App_DrawerContents/reseller_management.dart';
 import 'package:afghan_net/catagory.dart';
 import 'package:afghan_net/web/HomePageWeb.dart';
+import 'package:afghan_net/web/catagory/catagory.dart';
+import 'package:afghan_net/web/order_page.dart';
 import 'package:afghan_net/web/widgets/container.dart';
 import 'package:afghan_net/widgets/textWeb.dart';
 import 'package:afghan_net/widgets/transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class All_Drawer extends StatelessWidget {
-  const All_Drawer({
+class All_Drawer_Web extends StatelessWidget {
+  const All_Drawer_Web({
     super.key,
   });
 
@@ -60,7 +62,7 @@ class All_Drawer extends StatelessWidget {
             // const Icon(Icons.category),
             title: const Text(' Category '),
             onTap: () {
-              Get.to(() => ListViewPage());
+              Get.to(() => Catagory_web());
             },
           ),
           ListTile(
@@ -72,7 +74,7 @@ class All_Drawer extends StatelessWidget {
             //const Icon(Icons.arrow_outward_rounded),
             title: const Text(' Orders '),
             onTap: () {
-              Get.to(() => OrderPage1());
+              Get.to(() => OrderPage_Web());
             },
           ),
           ListTile(

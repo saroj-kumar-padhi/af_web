@@ -8,6 +8,7 @@ import 'package:afghan_net/web/catagory/tiktok.dart';
 import 'package:afghan_net/web/catagory/turkey/turkey.dart';
 import 'package:afghan_net/web/catagory/vimo/vimo.dart';
 import 'package:afghan_net/web/catagory/vpn/vpn.dart';
+import 'package:afghan_net/web/drawer/drawer.dart';
 import 'package:afghan_net/web/widgets/container.dart';
 import 'package:afghan_net/widgets/textWeb.dart';
 import 'package:flutter/material.dart';
@@ -28,8 +29,8 @@ class HomePageWeb extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                // width: MediaQuery.of(context).size.width * 0.4,
-              ),
+                  // width: MediaQuery.of(context).size.width * 0.4,
+                  ),
               CustomTextWeb1(text: 'Seller'),
               // SizedBox(
               //   width: MediaQuery.of(context).size.width * 0.4,
@@ -46,7 +47,7 @@ class HomePageWeb extends StatelessWidget {
           ),
         ),
       ),
-      drawer: All_Drawer(),
+      drawer: All_Drawer_Web(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -202,9 +203,9 @@ class HomePageWeb extends StatelessWidget {
           ],
         ),
       ),
-    );;
+    );
+    ;
   }
-
 }
 
  // _showDialog() {

@@ -1,6 +1,6 @@
+import 'package:afghan_net/home_page.dart';
 import 'package:afghan_net/splash.dart';
 import 'package:afghan_net/web/HomePageWeb.dart';
-
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,22 +14,32 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
-      return GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Af Net',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home:
+    double screenWidth = MediaQuery.of(context).size.width;
+    return Sizer(
+      builder: (context, orientation, deviceType) {
+        return GetMaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Af Net',
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              useMaterial3: true,
+            ),
+            home: _buildHomePage(screenWidth, deviceType));
+      },
+    );
+  }
 
-            deviceType == DeviceType.mobile ? Splash():
-            HomePageWeb());
-
-        
-
-      
-    },);
+  Widget _buildHomePage(double screenWidth, DeviceType deviceType) {
+    if (screenWidth < 400 || deviceType == DeviceType.mobile) {
+      return Splash();
+    } else if (screenWidth < 400) {
+      return HomePage();
+    } else if (screenWidth >= 700 && screenWidth < 1024) {
+      return HomePageWeb();
+    } else if (screenWidth >= 1024 && screenWidth <= 1920) {
+      return HomePageWeb();
+    } else {
+      return HomePage();
+    }
   }
 }
